@@ -157,7 +157,7 @@ const projects = [
   {
     name: 'Ceyda Tanrikulu',
     company: null,
-    phone: '0532 410 22 18',
+    phone: '0555 000 00 01',
     email: 'ceyda@example.com',
     address: 'Pamukkale / Denizli',
     notes: 'Mutfak tezgahi ve ada uygulamasi.',
@@ -256,7 +256,7 @@ const projects = [
   {
     name: 'Rota Villa',
     company: null,
-    phone: '0538 500 22 90',
+    phone: '0555 000 00 02',
     email: 'rota.villa@example.com',
     address: 'Mugla / Bodrum',
     notes: 'Dis mekan barbeku ve havuz kenari.',
@@ -300,7 +300,7 @@ const projects = [
   {
     name: 'Atlas Ofis',
     company: 'Atlas Ofis Mobilyalari',
-    phone: '0544 300 88 19',
+    phone: '0555 000 00 03',
     email: 'atlas@example.com',
     address: 'Izmir / Bornova',
     notes: 'Toplanti masasi ve karsilama bankosu.',
