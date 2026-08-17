@@ -1,0 +1,85 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: yapigranit_ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/yapigranit_ci
+      DIRECT_URL: postgresql://postgres:postgres@localhost:5432/yapigranit_ci
+      AUTH_SECRET: ci-test-secret-not-for-production
+      NEXTAUTH_SECRET: ci-test-secret-not-for-production
+      NODE_ENV: test
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Bağımlılıkları kur
+        run: npm ci
+
+      - name: Prisma Client üret
+        run: npx prisma generate
+
+      - name: Prisma schema doğrula
+        run: npx prisma validate
+
+      - name: Şemayı CI veritabanına uygula
+        run: npx prisma db push
+
+      - name: TypeScript kontrolü
+        run: npx tsc --noEmit
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Production build
+        run: npm run build
+
+      - name: Veri bütünlüğü taraması (boş CI veritabanında — sanity check)
+        run: npm run test:integrity
+
+      # NOT: Rol/yetki testleri (test:permissions) ve E2E testleri (test:e2e) çalışan bir
+      # dev sunucusu + seed edilmiş demo kullanıcılar gerektirir. Bu adım bu depoda henüz
+      # otomatik bir seed script'i CI'a bağlanmadığı için BİLEREK dahil edilmemiştir —
+      # bkz. docs/TEST_RAPORU.md "Çalıştırılamayan işlemler". Seed script'i hazır olduğunda
+      # buraya şu adımlar eklenmelidir:
+      #   - name: Demo kullanıcıları seed et
+      #     run: npx tsx scripts/seed-all-demo.ts
+      #   - name: Dev sunucusunu arka planda başlat
+      #     run: npm run dev:raw &
+      #   - name: Sunucunun ayağa kalkmasını bekle
+      #     run: npx wait-on http://localhost:3000
+      #   - name: Rol/yetki testleri
+      #     run: npm run test:permissions
+      #   - name: E2E testleri
+      #     run: npm run test:e2e
+
+  # Yük testi — manuel tetiklenir, normal PR akışında ÇALIŞMAZ.
+  load-test:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Yük testi yalnızca ayrı bir staging ortamına karşı, açık onayla manuel tetiklenmelidir."

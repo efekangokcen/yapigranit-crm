@@ -1,0 +1,517 @@
+/*
+ * stok.yapigranit.com tasarımının birebir kopyası.
+ *
+ * Kaynak: eski PHP uygulamasının Vuexy/Modern Admin (Bootstrap 4) teması —
+ * ~/Desktop/YapiGranit-Arsiv/analysis/stok-system/web/assets/tema/
+ * Aşağıdaki değerlerin tamamı o temanın gerçek CSS'i tarayıcıda render edilip
+ * getComputedStyle ile ölçülerek alındı; tahmin/yaklaşık değer yoktur.
+ *
+ * Font: eski site body'ye `"Roboto Condensed", sans-serif` yazıyor ama bu fontu
+ * HİÇBİR yerden yüklemiyor (head'de yalnızca Montserrat + Advent Pro var). Yani
+ * gerçekte çoğu makinede sistemin sans-serif'i (Windows'ta Arial) görünüyor.
+ * Aynı davranışı bozmamak için burada da font YÜKLENMEZ, sadece aynı stack
+ * bildirilir. Roboto Condensed kurulu olan makinede o, olmayanda sistem
+ * sans-serif'i çıkar — eski siteyle birebir aynı sonuç.
+ */
+.legacy-stock-app {
+  /* Ölçülen orijinal değerler */
+  --legacy-bg: #f8f8f8;              /* body background */
+  --legacy-text: #626262;            /* body color */
+  --legacy-card-bg: #fff;
+  --legacy-heading: #2c2c2c;         /* .card-title */
+  --legacy-page-title: #636363;      /* .content-header-title */
+  --legacy-menu-text: #565656;       /* .navigation .nav-item > a */
+  --legacy-menu-caption: #999;       /* .navigation-header span */
+  --legacy-breadcrumb: #4e4e4e;      /* .breadcrumb-item a */
+  --legacy-label: #464646;           /* label */
+  --legacy-input-border: #d9d9d9;    /* .form-control */
+  --legacy-input-text: #4e5154;
+  --legacy-table-line: #f8f8f8;      /* .table th/td kenarlıkları */
+  --legacy-table-hover: #f8f8f8;
+  --legacy-border-soft: #f1f1f1;
+  --legacy-accent: #00cfe8;          /* info */
+  --legacy-accent-dark: #00a9c0;
+  --legacy-accent-darker: #008fa2;
+  --legacy-success: #28c76f;
+  --legacy-danger: #ea5455;
+  --legacy-accent-soft-bg: #eefdff;
+  /* Gölgeler — temadan birebir */
+  --legacy-shadow-menu: rgba(0, 0, 0, .05);   /* .main-menu: 0 0 15px */
+  --legacy-shadow-navbar: rgba(0, 0, 0, .05); /* .floating-nav: 0 4px 20px */
+  --legacy-shadow-card: rgba(0, 0, 0, .1);    /* .card: 0 4px 25px */
+  --legacy-shadow-btn: rgba(0, 0, 0, .12);
+
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--legacy-bg);
+  color: var(--legacy-text);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* Eski sitede karanlık mod yok; CRM kabuğundan miras kalan tema anahtarı için
+   sadece okunabilirlik sağlayan bir varyant — açık modda hiçbir şey değişmez. */
+.dark .legacy-stock-app {
+  --legacy-bg: #0e1316;
+  --legacy-text: #b8bcc0;
+  --legacy-card-bg: #171d21;
+  --legacy-heading: #e7ebed;
+  --legacy-page-title: #d7dbde;
+  --legacy-menu-text: #b8bcc0;
+  --legacy-menu-caption: #6b7480;
+  --legacy-breadcrumb: #b8bcc0;
+  --legacy-label: #9aa1a7;
+  --legacy-input-border: #2a3238;
+  --legacy-input-text: #e7ebed;
+  --legacy-table-line: #232b30;
+  --legacy-table-hover: #1c2226;
+  --legacy-border-soft: #232b30;
+  --legacy-accent-soft-bg: #0a2b30;
+  --legacy-shadow-menu: rgba(0, 0, 0, .3);
+  --legacy-shadow-navbar: rgba(0, 0, 0, .35);
+  --legacy-shadow-card: rgba(0, 0, 0, .45);
+  --legacy-shadow-btn: rgba(0, 0, 0, .4);
+}
+
+/* ── Sol menü (.main-menu) ─────────────────────────────────────────────── */
+.legacy-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 30;
+  display: flex;
+  width: 260px;                       /* orijinal: 260px */
+  flex-direction: column;
+  background: var(--legacy-card-bg);
+  box-shadow: 0 0 15px 0 var(--legacy-shadow-menu);
+}
+
+.legacy-logo {
+  display: flex;
+  height: 84px;                       /* orijinal navbar-header yüksekliği */
+  align-items: center;
+  padding: 18px 22px;
+}
+
+.legacy-logo img { width: 176px; height: auto; object-fit: contain; }
+
+.legacy-menu-caption {
+  padding: 18px 22px 8px;
+  color: var(--legacy-menu-caption);
+  font-size: 12.6px;                  /* orijinal: 12.6px */
+  font-weight: 500;
+  letter-spacing: .14px;              /* orijinal: .14px */
+  text-transform: uppercase;
+}
+
+.legacy-sidebar nav { padding: 0 15px; }
+
+.legacy-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 3px 0;
+  padding: 7px 15px;                  /* orijinal: 7px 15px */
+  border-radius: 4px;                 /* orijinal: 4px */
+  color: var(--legacy-menu-text);
+  font-size: 15.4px;                  /* orijinal: 15.4px */
+  font-weight: 400;
+  transition: .15s ease;
+}
+
+.legacy-menu-link:hover { color: var(--legacy-accent); transform: translateX(2px); }
+
+/* Aktif öğe — orijinal: linear-gradient(270deg, #00cfe8, rgba(0,207,232,.5)) */
+.legacy-menu-link.active {
+  color: #fff;
+  background: linear-gradient(270deg, #00cfe8, rgba(0, 207, 232, .5));
+  box-shadow: 0 0 10px 1px rgba(0, 207, 232, .35);
+}
+
+/* Eski sitede yok — CRM'e dönüş için eklenen tek öğe. */
+.legacy-crm-back {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: auto 15px 20px;
+  padding: 14px;
+  border: 2px solid var(--legacy-accent);
+  border-radius: 6px;
+  color: var(--legacy-accent-darker);
+  background: var(--legacy-accent-soft-bg);
+  box-shadow: 0 5px 16px rgba(0, 207, 232, .18);
+}
+.legacy-crm-back:hover { color: #fff; background: linear-gradient(270deg, #00cfe8, #00a9c0); }
+.legacy-crm-back span { display: flex; flex-direction: column; line-height: 1.2; }
+.legacy-crm-back small { margin-top: 4px; font-size: 10px; font-weight: 500; opacity: .75; }
+
+.legacy-stage { min-height: 100vh; min-height: 100dvh; padding-left: 260px; }
+
+/* ── Üst çubuk (.header-navbar.floating-nav) ───────────────────────────── */
+.legacy-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  height: 62px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 18.2px 30.8px 0;             /* orijinal: 18.2px 30.8px 0 */
+  padding: 0 22px;
+  border-radius: 7px;                  /* orijinal: 7px */
+  background: var(--legacy-card-bg);
+  box-shadow: 0 4px 20px 0 var(--legacy-shadow-navbar);
+  font-size: 14px;
+}
+.legacy-topbar a { color: var(--legacy-accent-dark); font-weight: 600; }
+.legacy-topbar-left { display: flex; align-items: center; gap: 10px; }
+.legacy-menu-toggle { display: none; }
+
+/* ── İçerik (.content-wrapper) ─────────────────────────────────────────── */
+.legacy-content { padding: 25.2px 30.8px 48px; }   /* orijinal: 25.2px 30.8px 0 */
+
+.legacy-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+.legacy-page-header h1 {
+  color: var(--legacy-page-title);
+  font-size: 24.36px;                 /* orijinal: 24.36px */
+  font-weight: 500;
+}
+.legacy-page-header ol { display: flex; gap: 20px; font-size: 14px; }
+.legacy-page-header li + li::before { content: '›'; margin-right: 20px; color: var(--legacy-menu-caption); }
+.legacy-page-header a { color: var(--legacy-breadcrumb); }
+
+/* ── Kart (.card) ──────────────────────────────────────────────────────── */
+.legacy-card {
+  margin-bottom: 30.8px;              /* orijinal: 30.8px */
+  border-radius: 7px;                 /* orijinal: 7px */
+  background: var(--legacy-card-bg);
+  box-shadow: 0 4px 25px 0 var(--legacy-shadow-card);
+}
+.legacy-card-body { padding: 21px; }  /* orijinal .card-body: 21px */
+.legacy-card-header { padding: 21px 21px 0; }  /* orijinal .card-header */
+.legacy-card-title { color: var(--legacy-heading); font-size: 18.48px; font-weight: 500; }
+
+/* Gradyanlar — orijinal .bg-gradient-*: linear-gradient(30deg, X, rgba(X,.5)) */
+.legacy-gradient-info { border: 0; color: #fff; background: linear-gradient(30deg, #00cfe8, rgba(0, 207, 232, .5)); }
+.legacy-gradient-success { border: 0; color: #fff; background: linear-gradient(30deg, #28c76f, rgba(40, 199, 111, .5)); }
+.legacy-gradient-danger { border: 0; color: #fff; background: linear-gradient(30deg, #ea5455, rgba(234, 84, 85, .5)); }
+
+/* Anasayfadaki yuvarlak ikon (.avatar.avatar-xl.bg-white.shadow-lg) */
+.legacy-avatar-xl {
+  display: inline-flex;
+  width: 70px;                        /* orijinal: 70px */
+  height: 70px;
+  margin: 5px;                        /* orijinal: 5px */
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 14px 42px 0 rgba(34, 41, 47, .176);  /* orijinal shadow-lg */
+}
+/* .avatar-content i.info.font-large-1 — orijinal: 28px, #00cfe8 */
+.legacy-avatar-xl svg { width: 28px; height: 28px; color: #00cfe8; }
+
+/* Anasayfa kart başlığı — orijinal h2.mt-2.white */
+.legacy-home-card { display: block; padding: 21px; text-align: center; }
+.legacy-home-card h2 {
+  margin-top: 21px;                   /* orijinal: 21px */
+  color: #fff;
+  font-size: 24.36px;                 /* orijinal: 24.36px */
+  font-weight: 500;
+}
+
+/* ── Buton (.btn) ──────────────────────────────────────────────────────── */
+.legacy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 6px;                 /* orijinal: 5.999px */
+  padding: 12.6px 28px;               /* orijinal: 12.6px 28px */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  box-shadow: 0 4px 12px var(--legacy-shadow-btn);
+}
+
+/* ── Form (.form-control) ──────────────────────────────────────────────── */
+.legacy-input {
+  width: 100%;
+  height: 37.4px;                     /* orijinal: 37.3984px */
+  border: 1px solid var(--legacy-input-border);
+  border-radius: 5px;                 /* orijinal: 5px */
+  background: var(--legacy-card-bg);
+  padding: 9.8px;                     /* orijinal: 9.8px */
+  color: var(--legacy-input-text);
+  font-size: 13.44px;                 /* orijinal: 13.44px */
+  outline: none;
+}
+.legacy-input:focus { border-color: var(--legacy-accent); box-shadow: 0 0 0 2px rgba(0, 207, 232, .12); }
+
+.legacy-label { color: var(--legacy-label); font-size: 11.9px; font-weight: 400; }
+
+/* ── Tablo (.table) ────────────────────────────────────────────────────── */
+.legacy-table-wrap { overflow-x: auto; border-radius: 7px; background: var(--legacy-card-bg); box-shadow: 0 4px 25px 0 var(--legacy-shadow-card); }
+.legacy-table { width: 100%; border-collapse: collapse; }
+.legacy-table th {
+  padding: 7px;                       /* orijinal: 7px */
+  border-bottom: 2px solid var(--legacy-table-line);
+  color: var(--legacy-text);
+  text-align: left;
+  font-size: 11.9px;                  /* orijinal: 11.9px */
+  font-weight: 700;
+  letter-spacing: .14px;
+}
+.legacy-table td {
+  padding: 7px;                       /* orijinal: 7px */
+  border-top: 1px solid var(--legacy-table-line);
+  font-size: 14px;
+  color: var(--legacy-text);
+}
+.legacy-table tbody tr:hover { background: var(--legacy-table-hover); }
+
+/* ── Ürün ekleme formu (Tailwind bileşenlerini temaya uydurur) ─────────── */
+.legacy-product-form > .grid:first-child > button {
+  min-height: 112px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--legacy-card-bg);
+  box-shadow: 0 4px 25px 0 var(--legacy-shadow-card);
+  text-align: center;
+}
+.legacy-product-form > .grid:first-child > button[class*="bg-blue-600"] {
+  color: #fff;
+  background: linear-gradient(30deg, #00cfe8, rgba(0, 207, 232, .5));
+  box-shadow: 0 4px 18px rgba(0, 207, 232, .35);
+}
+.legacy-product-form > .grid:first-child svg { margin-inline: auto; }
+.legacy-product-form [data-slot="card"] {
+  border: 0;
+  border-radius: 7px;
+  background: var(--legacy-card-bg);
+  box-shadow: 0 4px 25px 0 var(--legacy-shadow-card);
+}
+.legacy-product-form input,
+.legacy-product-form textarea,
+.legacy-product-form select {
+  border-color: var(--legacy-input-border);
+  border-radius: 5px;
+  background: var(--legacy-card-bg);
+}
+.legacy-product-form input:focus,
+.legacy-product-form textarea:focus,
+.legacy-product-form select:focus {
+  border-color: var(--legacy-accent);
+  box-shadow: 0 0 0 2px rgba(0, 207, 232, .12);
+}
+.legacy-product-form > div:last-child button:last-child {
+  background: linear-gradient(30deg, #28c76f, rgba(40, 199, 111, .5));
+  box-shadow: 0 4px 12px rgba(40, 199, 111, .3);
+}
+
+@media (max-width: 900px) {
+  .legacy-sidebar { display: none; }
+  .legacy-menu-toggle { display: inline-flex; }
+  .legacy-stage { padding-left: 0; }
+  .legacy-topbar { margin: 0; border-radius: 0; }
+  .legacy-content { padding: 20px 14px 40px; }
+  .legacy-page-header { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .legacy-page-header ol { flex-wrap: wrap; gap: 8px; }
+  .legacy-page-header li + li::before { margin-right: 8px; }
+}
+
+/* ── Barkod okutma kutusu ──────────────────────────────────────────────────
+ * Eski uygulamada Depoya Ekle / Depodan Al / Bilgi Al ekranlarının üçünde de
+ * aynı satır içi stil vardı:
+ *   #barcodeInput      { height: 100px; font-size: 24px }
+ *   #barcodeInput::placeholder { font-size: 18px }
+ *   #barkodDegistir    { margin-left: 20px; width: 130px; height: 100px;
+ *                        font-size: 16px; padding: 0 }
+ */
+.legacy-barcode-input {
+  height: 100px;
+  font-size: 24px;
+  padding: 9.8px 14px;
+}
+.legacy-barcode-input::placeholder { font-size: 18px; }
+
+.legacy-barcode-toggle {
+  width: 130px;
+  height: 100px;
+  margin-left: 20px;
+  padding: 0;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+@media (max-width: 640px) {
+  .legacy-barcode-toggle { width: 100%; height: 56px; margin-left: 0; }
+}
+
+/* ── Açılır alt menü (.nav-item.has-sub + .menu-content) ──────────────────
+ * Orijinalde "Stok" öğesi tıklanınca açılan bir alt menüye sahip; alt bağlantılar
+ * 13.86px ve 20px sol girintili (ölçülen değerler).
+ */
+.legacy-menu-group { display: flex; width: 100%; align-items: center; gap: 13px; }
+.legacy-menu-group .legacy-menu-chevron { margin-left: auto; transition: transform .2s ease; }
+.legacy-menu-group[aria-expanded="true"] .legacy-menu-chevron { transform: rotate(90deg); }
+
+.legacy-submenu { overflow: hidden; }
+.legacy-sublink {
+  display: block;
+  padding: 10px 15px 10px 20px;       /* orijinal: 10px 15px 10px 20px */
+  border-radius: 4px;
+  color: var(--legacy-menu-text);
+  font-size: 13.86px;                 /* orijinal: 13.86px */
+  transition: .15s ease;
+}
+.legacy-sublink:hover { color: var(--legacy-accent); transform: translateX(2px); }
+.legacy-sublink.active { color: var(--legacy-accent); font-weight: 600; }
+
+/* ── Filtre paneli (.add-new-data-sidebar) ────────────────────────────────
+ * Eski Stok Listesi ekranındaki sağdan kayan filtre paneli. Ölçüler
+ * tema/css/pages/data-list-view.css'ten birebir alındı.
+ */
+.legacy-filter-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1032;
+  background: rgba(0, 0, 0, .2);     /* orijinal: rgba(0,0,0,.2) */
+  transition: all .3s ease;
+}
+
+.legacy-filter-panel {
+  position: fixed;
+  z-index: 1033;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 30rem;                       /* orijinal: 30rem */
+  max-width: 90vw;                    /* orijinal: 90vw */
+  height: 100vh;
+  height: 100dvh;
+  background: var(--legacy-card-bg);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, .05);  /* orijinal */
+  transition: transform .25s ease;    /* orijinal: all .25s ease */
+}
+
+/* .new-data-title — orijinal: padding-bottom .714rem + 1px alt çizgi */
+.legacy-filter-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.143rem 1.143rem .714rem;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.dark .legacy-filter-head { border-bottom-color: rgba(255, 255, 255, .1); }
+.legacy-filter-head h4 { color: var(--legacy-heading); font-size: 18.48px; font-weight: 500; }
+
+.legacy-filter-body { flex: 1; overflow-y: auto; padding: 1.143rem; }
+.legacy-filter-body fieldset { margin-bottom: 1.143rem; }
+.legacy-filter-body label { display: block; margin-bottom: .3rem; color: var(--legacy-label); font-size: 11.9px; }
+
+.legacy-filter-foot { display: flex; gap: 12px; padding: 1.143rem; }
+.legacy-filter-foot > * { flex: 1; }
+
+/* Tablo alt toplam satırı (orijinal tfoot) */
+.legacy-table tfoot td { padding: 7px; border-top: 2px solid var(--legacy-table-line); }
+
+/* ── Ürün Ekle ekranı ─────────────────────────────────────────────────────
+ * Eski urun/new.html.twig düzeni: üstte üç ürün tipi kartı (.urun-tipi-card,
+ * seçili olan .bg-gradient-info), altında TEK kart içinde yukarıdan aşağıya
+ * alanlar ve en altta yeşil "Kaydı Tamamla" (.btn.bg-gradient-success).
+ */
+.legacy-tip-card {
+  display: block;
+  width: 100%;
+  padding: 21px;
+  border-radius: 7px;
+  background: var(--legacy-card-bg);
+  box-shadow: 0 4px 25px 0 var(--legacy-shadow-card);
+  color: var(--legacy-text);
+  text-align: center;
+  transition: .15s ease;
+}
+/* .font-large-1 — orijinal: 28px */
+.legacy-tip-card span { font-size: 28px; }
+.legacy-tip-card.active {
+  color: #fff;
+  background: linear-gradient(30deg, #00cfe8, rgba(0, 207, 232, .5));
+}
+
+/* .blockquote.pl-1.border-left-info.border-left-3 */
+.legacy-blockquote {
+  margin-bottom: 1.143rem;
+  padding-left: .5rem;
+  border-left: 3px solid var(--legacy-accent);
+}
+
+/* Form alanları tek sütun, yukarıdan aşağıya — orijinaldeki gibi */
+.legacy-form-row { margin-bottom: 1.143rem; }
+.legacy-form-row > label {
+  display: block;
+  margin-bottom: .3rem;
+  color: var(--legacy-label);
+  font-size: 11.9px;
+}
+
+/* "Menüyü Gizle" — canlı sitedeki sol menü sonundaki bağlantı (mavi metin). */
+.legacy-menu-hide { color: var(--legacy-accent-dark); }
+.legacy-stock-app.menu-collapsed .legacy-sidebar { display: none; }
+.legacy-stock-app.menu-collapsed .legacy-stage { padding-left: 0; }
+
+/* Canlıdaki .btn.btn-outline-black — şeffaf zemin, 1px #d9d9d9 kenar */
+.legacy-btn-outline {
+  border: 1px solid var(--legacy-input-border);
+  background: transparent;
+  box-shadow: none;
+  color: var(--legacy-text);
+}
+/* Plaka/Parça — canlıda ikisi de yeşil kenarlı; seçili olan dolu yeşil */
+.legacy-btn-outline-success {
+  border: 1px solid var(--legacy-success);
+  background: transparent;
+  box-shadow: none;
+  color: var(--legacy-text);
+}
+.legacy-btn-outline-success.is-selected { color: #fff; background: var(--legacy-success); }
+
+/* Kademeli kilit — orijinaldeki pasif alan görünümü (gri zemin) */
+.legacy-input:disabled,
+.legacy-input[disabled] {
+  background: #f5f5f1;   /* canlıdan ölçüldü */
+  color: #5f5f5f;        /* canlıdan ölçüldü */
+  cursor: not-allowed;
+}
+.dark .legacy-input:disabled,
+.dark .legacy-input[disabled] { background: #1c2226; color: #6b7480; }
+
+/* Plaka / Parça seçim düğmeleri — canlıdan ölçülen değerler:
+ * seçili: linear-gradient(30deg,#28c76f,rgba(40,199,111,.5)), beyaz metin
+ * boş   : şeffaf zemin, 1px solid #28c76f kenar, #626262 metin
+ * ikisi : radius 7px, padding 14px, font 18.2px  (.font-medium-3.p-1.rounded)
+ */
+.legacy-plaka-parca {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--legacy-success);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--legacy-text);
+  font-size: 18.2px;
+  text-align: center;
+  cursor: pointer;
+  transition: .15s ease;
+}
+.legacy-plaka-parca.is-selected {
+  border-color: #ededed;
+  color: #fff;
+  background: linear-gradient(30deg, #28c76f, rgba(40, 199, 111, .5));
+}

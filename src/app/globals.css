@@ -1,0 +1,503 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * "Lithos Industrial" marka rengi — Tailwind'in varsayılan cyan paletinin
+ * gerçek theme kaydı üzerinden yeniden tanımlanması (bkz. Tailwind v4 @theme).
+ * Global ama güvenli: stok takip (/tas-takibi) modülünde cyan-* KULLANILMIYOR
+ * (tek istisna stock-photo-thumb.tsx'teki hover halkasıydı, o sabit hex'e
+ * çevrildi) — bu yüzden bu değişiklik oraya sızmıyor. slate-* paleti ise
+ * stok takipte yoğun kullanıldığı için BİLEREK dokunulmadı.
+ */
+@theme {
+  --color-cyan-50: #eef3f5;
+  --color-cyan-100: #dbe4e8;
+  --color-cyan-200: #b8cbd3;
+  --color-cyan-300: #8fb0bc;
+  --color-cyan-400: #4d7f92;
+  --color-cyan-500: #276489;
+  --color-cyan-600: #003550;
+  --color-cyan-700: #002a40;
+  --color-cyan-800: #001e2f;
+  --color-cyan-900: #00151f;
+  --color-cyan-950: #000d14;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-app-sans);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-chart-7: var(--chart-7);
+  --color-chart-8: var(--chart-8);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  /* Yüzeyler — sayfa zemini karttan bir ton koyu, kart "kalkık" durur. */
+  --background: #f4f6f8;
+  --foreground: #14181b;
+  --surface: #ffffff;
+  --surface-2: #eef1f4;
+  --card: #ffffff;
+  --card-foreground: #14181b;
+  --popover: #ffffff;
+  --popover-foreground: #14181b;
+
+  /* Marka */
+  --primary: #003550;
+  --primary-foreground: #ffffff;
+  --secondary: #dbe4e8;
+  --secondary-foreground: #2b3236;
+  --muted: #eef1f4;
+  --muted-foreground: #566068;
+  --accent: #dbe4e8;
+  --accent-foreground: #003550;
+
+  /* Anlamsal durum renkleri — rozet/uyarı/grafik hepsi bunlardan beslenir */
+  --destructive: #d0342c;
+  --success: #0f7a52;
+  --warning: #b06a00;
+  --info: #1f6bb5;
+
+  --border: #dde3e8;
+  --border-strong: #c3ccd4;
+  --input: #cfd7de;
+  --ring: #276489;
+
+  /* Grafik paleti — 8 seri, açık modda 4.5:1 metin kontrastına yakın tonlar */
+  --chart-1: #276489;
+  --chart-2: #0f7a52;
+  --chart-3: #b06a00;
+  --chart-4: #a33a8f;
+  --chart-5: #c2452d;
+  --chart-6: #4d7f92;
+  --chart-7: #6a5acd;
+  --chart-8: #7a8b93;
+  --grid-line: #e4e9ed;
+
+  --radius: 0.5rem;
+
+  /* Cam yüzey (üst bar, KPI kartları) */
+  --glass: rgb(255 255 255 / 72%);
+  --glass-border: rgb(255 255 255 / 60%);
+  --shadow-card: 0 1px 2px rgb(16 24 32 / 4%), 0 8px 24px -12px rgb(16 24 32 / 14%);
+  --shadow-raised: 0 2px 4px rgb(16 24 32 / 5%), 0 18px 40px -20px rgb(16 24 32 / 22%);
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: #566068;
+  --sidebar-primary: #003550;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #eef3f5;
+  --sidebar-accent-foreground: #003550;
+  --sidebar-border: #e3e8ec;
+  --sidebar-ring: #276489;
+}
+
+.dark {
+  --background: #0a0e11;
+  --foreground: #e6eaed;
+  --surface: #141a1f;
+  --surface-2: #1b232a;
+  --card: #141a1f;
+  --card-foreground: #e6eaed;
+  --popover: #1b232a;
+  --popover-foreground: #e6eaed;
+
+  --primary: #5f96ab;
+  --primary-foreground: #04141c;
+  --secondary: #222b32;
+  --secondary-foreground: #ccd6dc;
+  --muted: #1b232a;
+  --muted-foreground: #9aa6ae;
+  --accent: #222b32;
+  --accent-foreground: #8fb0bc;
+
+  --destructive: #f2685c;
+  --success: #3fbb8b;
+  --warning: #e0a33c;
+  --info: #5aa9f0;
+
+  --border: #26313a;
+  --border-strong: #35424c;
+  --input: #2c3841;
+  --ring: #5f96ab;
+
+  --chart-1: #5aa9f0;
+  --chart-2: #3fbb8b;
+  --chart-3: #e0a33c;
+  --chart-4: #cf87d8;
+  --chart-5: #f2685c;
+  --chart-6: #7fc4d8;
+  --chart-7: #9d95f5;
+  --chart-8: #8c9aa3;
+  --grid-line: #232d35;
+
+  --glass: rgb(20 26 31 / 72%);
+  --glass-border: rgb(255 255 255 / 8%);
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 40%), 0 10px 28px -14px rgb(0 0 0 / 60%);
+  --shadow-raised: 0 2px 6px rgb(0 0 0 / 45%), 0 22px 48px -24px rgb(0 0 0 / 70%);
+
+  --sidebar: #0e1418;
+  --sidebar-foreground: #9aa6ae;
+  --sidebar-primary: #5f96ab;
+  --sidebar-primary-foreground: #04141c;
+  --sidebar-accent: #1b232a;
+  --sidebar-accent-foreground: #8fb0bc;
+  --sidebar-border: #202a31;
+  --sidebar-ring: #5f96ab;
+}
+
+/*
+ * STOK TAKİP MODÜLÜ DOKUNULMAZ.
+ *
+ * /tas-takibi kendi legacy-stock.css'ini kullanır ama içindeki shadcn
+ * bileşenleri (Card/Button/Table/Dialog) yukarıdaki :root tokenlarından
+ * besleniyor. CRM kabuğu için tokenlar yenilendiğinde stok ekranları da
+ * değişirdi. Bu blok, stok modülü ekrandayken tokenları ESKİ değerlerine
+ * geri alır — böylece /tas-takibi bu tasarım çalışmasından hiç etkilenmez.
+ *
+ * `body:has(...)` kullanılmasının sebebi: dialog/sheet gibi portal'la
+ * body'ye taşınan içerikler .legacy-stock-app ağacının DIŞINDA kalıyor;
+ * kök seviyeden geri almak onları da kapsıyor.
+ */
+body:has(.legacy-stock-app) {
+  --background: #f8f9fa;
+  --foreground: #191c1d;
+  --surface: #ffffff;
+  --surface-2: #edeeef;
+  --card: #ffffff;
+  --card-foreground: #191c1d;
+  --popover: #ffffff;
+  --popover-foreground: #191c1d;
+  --primary: #003550;
+  --primary-foreground: #ffffff;
+  --secondary: #dbe4e8;
+  --secondary-foreground: #33393c;
+  --muted: #edeeef;
+  --muted-foreground: #41484e;
+  --accent: #dbe4e8;
+  --accent-foreground: #003550;
+  --destructive: oklch(0.58 0.18 24);
+  --border: #c1c7cf;
+  --border-strong: #c1c7cf;
+  --input: #c1c7cf;
+  --ring: #003550;
+  --radius: 0.3rem;
+  --shadow-card: 0 4px 22px rgb(0 0 0 / 5%);
+}
+
+.dark body:has(.legacy-stock-app) {
+  --background: #0e1316;
+  --foreground: #e7ebed;
+  --surface: #171d21;
+  --surface-2: #1c2226;
+  --card: #171d21;
+  --card-foreground: #e7ebed;
+  --popover: #1c2226;
+  --popover-foreground: #e7ebed;
+  --primary: #4d7f92;
+  --primary-foreground: #04141c;
+  --secondary: #232b30;
+  --secondary-foreground: #cbd5da;
+  --muted: #1c2226;
+  --muted-foreground: #98a3a9;
+  --accent: #232b30;
+  --accent-foreground: #8fb0bc;
+  --destructive: oklch(0.65 0.18 24);
+  --border: #2a3238;
+  --border-strong: #2a3238;
+  --input: #2a3238;
+  --ring: #4d7f92;
+}
+
+body:has(.legacy-stock-app) [data-slot="card"] {
+  border-color: #e5e5e8;
+  border-radius: 6px;
+  box-shadow: 0 4px 22px rgb(0 0 0 / 5%);
+}
+
+.dark body:has(.legacy-stock-app) [data-slot="card"] {
+  border-color: var(--border);
+}
+
+body:has(.legacy-stock-app) [data-slot="button"],
+body:has(.legacy-stock-app) [data-slot="input"],
+body:has(.legacy-stock-app) [data-slot="textarea"],
+body:has(.legacy-stock-app) [data-slot="select-trigger"] {
+  border-radius: 5px;
+}
+
+body:has(.legacy-stock-app) [data-slot="table-header"] {
+  background: var(--muted);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    color-scheme: light;
+    font-family: var(--font-app-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+
+  .dark body {
+    color-scheme: dark;
+  }
+
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.011em;
+  }
+
+  /* Sayısal sütunlar hizalı dursun — tablo ve KPI'larda tabular rakam. */
+  .tabular,
+  th[data-align="right"],
+  td[data-align="right"] {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  [data-slot="card"] {
+    border-color: var(--border);
+    border-radius: var(--radius);
+    background: var(--card);
+    box-shadow: var(--shadow-card);
+  }
+
+  [data-slot="button"] {
+    border-radius: calc(var(--radius) * 0.75);
+  }
+
+  [data-slot="input"],
+  [data-slot="textarea"],
+  [data-slot="select-trigger"] {
+    border-radius: calc(var(--radius) * 0.75);
+    background: var(--card);
+  }
+
+  [data-slot="table-header"] {
+    background: var(--surface-2);
+  }
+}
+
+/*
+ * "Lithos Industrial" — genel CRM kabuğu için tasarım teması. Marka rengi
+ * (cyan-*) ve tokenlar (:root) yukarıda GLOBAL olarak tanımlı — stok takip
+ * (/tas-takibi) bunları kullanmadığı için (legacy-stock.css kendi sabit hex
+ * renklerini kullanır) bu güvenli. Burada sadece .lithos-theme alt ağacına
+ * özel yazı tipi ve bileşen ince ayarları var.
+ */
+.lithos-theme {
+  font-family: var(--font-lithos), Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.lithos-theme [data-slot="card"] {
+  border-color: var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+}
+
+.lithos-theme [data-slot="button"] {
+  border-radius: calc(var(--radius) * 0.75);
+}
+
+.lithos-theme [data-slot="input"],
+.lithos-theme [data-slot="textarea"],
+.lithos-theme [data-slot="select-trigger"] {
+  border-radius: calc(var(--radius) * 0.75);
+  background: var(--card);
+}
+
+.lithos-theme [data-slot="table-header"] {
+  background: var(--surface-2);
+}
+
+.lithos-theme [data-slot="table-head"] {
+  height: 2.25rem;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+/* ─── Uygulama kabuğu yardımcı sınıfları ─────────────────────────────────
+ * Sadece .lithos-theme altında ya da açıkça sınıfla kullanıldığı için stok
+ * takip modülünü etkilemez.
+ */
+
+/* Cam yüzey: üst bar ve öne çıkan KPI kartları */
+.glass-surface {
+  background: var(--glass);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-color: var(--glass-border);
+}
+
+/* İnce üst vurgu çizgisi olan panel — rapor/KPI kartlarında kullanılır */
+.accent-top {
+  position: relative;
+}
+
+.accent-top::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: linear-gradient(90deg, var(--chart-1), var(--chart-2));
+  opacity: 0.9;
+}
+
+/* Veri yoğun tablolar: zebra + yapışkan başlık */
+.data-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--surface-2);
+}
+
+.data-table tbody tr:nth-child(2n) {
+  background: color-mix(in srgb, var(--surface-2) 45%, transparent);
+}
+
+.data-table tbody tr:hover {
+  background: color-mix(in srgb, var(--primary) 7%, transparent);
+}
+
+/* Grafiklerin ızgara çizgileri ve eksen yazıları */
+.chart-grid line {
+  stroke: var(--grid-line);
+  stroke-width: 1;
+}
+
+.chart-axis text {
+  fill: var(--muted-foreground);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* İnce kaydırma çubuğu — panellerde */
+.thin-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+
+.thin-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.thin-scroll::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: var(--border-strong);
+}
+
+.thin-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--ring) 25%, transparent);
+  color: inherit;
+}
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinner {
+  -moz-appearance: textfield;
+}
+
+/* Grafik/sayaç girişleri — hareket azaltma tercihine saygılı */
+@keyframes chart-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-rise {
+  animation: chart-rise 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

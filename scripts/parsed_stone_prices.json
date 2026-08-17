@@ -1,0 +1,4187 @@
+[
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "AERIS",
+    "kalinlikMm": 4,
+    "fiyat": 3148,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "AERIS",
+    "kalinlikMm": 8,
+    "fiyat": 48280,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "AERIS",
+    "kalinlikMm": 12,
+    "fiyat": 71290,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "AERIS",
+    "kalinlikMm": 20,
+    "fiyat": 81070,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "ETER",
+    "kalinlikMm": 8,
+    "fiyat": 48280,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "EVOK",
+    "kalinlikMm": 8,
+    "fiyat": 48280,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "KEENA",
+    "kalinlikMm": 8,
+    "fiyat": 48280,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "KOVIK",
+    "kalinlikMm": 8,
+    "fiyat": 48280,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "LUNAR",
+    "kalinlikMm": 8,
+    "fiyat": 48280,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "THALA",
+    "kalinlikMm": 8,
+    "fiyat": 48280,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "TRILIUM",
+    "kalinlikMm": 4,
+    "fiyat": 3148,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "BROMO",
+    "kalinlikMm": 8,
+    "fiyat": 67040,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "BROMO",
+    "kalinlikMm": 12,
+    "fiyat": 98880,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "BROMO",
+    "kalinlikMm": 20,
+    "fiyat": 112600,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "ALBARIUM",
+    "kalinlikMm": 4,
+    "fiyat": 4594,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "GRAFITE",
+    "kalinlikMm": 4,
+    "fiyat": 4594,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "MARINA",
+    "kalinlikMm": 4,
+    "fiyat": 4594,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "SABBIA",
+    "kalinlikMm": 4,
+    "fiyat": 4594,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "UMBER",
+    "kalinlikMm": 4,
+    "fiyat": 4594,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "ENTZO",
+    "kalinlikMm": 8,
+    "fiyat": 90490,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "ENTZO",
+    "kalinlikMm": 12,
+    "fiyat": 133840,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "ENTZO",
+    "kalinlikMm": 20,
+    "fiyat": 154290,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "LAURENT",
+    "kalinlikMm": 4,
+    "fiyat": 5305,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "NEURAL",
+    "kalinlikMm": 4,
+    "fiyat": 5305,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "REM",
+    "kalinlikMm": 8,
+    "fiyat": 90490,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "REM",
+    "kalinlikMm": 12,
+    "fiyat": 133840,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "REM",
+    "kalinlikMm": 20,
+    "fiyat": 154290,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "LUCID",
+    "kalinlikMm": 4,
+    "fiyat": 6348,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "DEKTON",
+    "renk": "AWAKE BM",
+    "kalinlikMm": 8,
+    "fiyat": 108830,
+    "paraBirimi": "EUR",
+    "boyut": 4.57
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Barro",
+    "kalinlikMm": 12,
+    "fiyat": 130,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Pietra di Luna",
+    "kalinlikMm": 12,
+    "fiyat": 130,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Pietra di Osso",
+    "kalinlikMm": 12,
+    "fiyat": 130,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Pietra di Piombo",
+    "kalinlikMm": 12,
+    "fiyat": 130,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Shilin",
+    "kalinlikMm": 12,
+    "fiyat": 130,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Basalt Black",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Basalt Grey",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Beton",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calatorao",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Just White",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Krater",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "La Boheme",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Layla",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Nero Zimbabwe",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Niagara",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Retrostone",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Zaha Stone",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Abu Dhabi White",
+    "kalinlikMm": 12,
+    "fiyat": 162,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Amazonico",
+    "kalinlikMm": 12,
+    "fiyat": 162,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta",
+    "kalinlikMm": 12,
+    "fiyat": 162,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta Gold",
+    "kalinlikMm": 12,
+    "fiyat": 162,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Estatuario",
+    "kalinlikMm": 12,
+    "fiyat": 162,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Mont Blanc",
+    "kalinlikMm": 12,
+    "fiyat": 162,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Sofia Cuprum",
+    "kalinlikMm": 12,
+    "fiyat": 162,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Iron Copper",
+    "kalinlikMm": 12,
+    "fiyat": 174,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Iron Corten",
+    "kalinlikMm": 12,
+    "fiyat": 174,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Iron Frost",
+    "kalinlikMm": 12,
+    "fiyat": 174,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Iron Grey",
+    "kalinlikMm": 12,
+    "fiyat": 174,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Strata Argentum",
+    "kalinlikMm": 12,
+    "fiyat": 174,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Abu Dhabi White",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta Gold",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Estatuario",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta Luxe",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta Luxe",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calista",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Colorado Dunes",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Himalaya Crystal",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Himalaya Crystal",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Layla",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Niagara",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "San Simone",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Whitehaben",
+    "kalinlikMm": 12,
+    "fiyat": 180,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Alexandra",
+    "kalinlikMm": 12,
+    "fiyat": 198,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Arabesque",
+    "kalinlikMm": 12,
+    "fiyat": 198,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta Royale",
+    "kalinlikMm": 12,
+    "fiyat": 198,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Colorado Dunes",
+    "kalinlikMm": 12,
+    "fiyat": 198,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "San Simone",
+    "kalinlikMm": 12,
+    "fiyat": 198,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Whitehaben",
+    "kalinlikMm": 12,
+    "fiyat": 198,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta Roma",
+    "kalinlikMm": 12,
+    "fiyat": 115,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calatorao",
+    "kalinlikMm": 12,
+    "fiyat": 115,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Colasseo",
+    "kalinlikMm": 12,
+    "fiyat": 115,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Creme",
+    "kalinlikMm": 12,
+    "fiyat": 115,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Pietra Di Luna",
+    "kalinlikMm": 12,
+    "fiyat": 115,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Pietra di Osso",
+    "kalinlikMm": 12,
+    "fiyat": 115,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Pietra di Piombo",
+    "kalinlikMm": 12,
+    "fiyat": 115,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Shilin",
+    "kalinlikMm": 12,
+    "fiyat": 115,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Taj Mahal",
+    "kalinlikMm": 12,
+    "fiyat": 115,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Abu Dhabi White",
+    "kalinlikMm": 12,
+    "fiyat": 127,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta",
+    "kalinlikMm": 12,
+    "fiyat": 127,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Everest Sunrise",
+    "kalinlikMm": 12,
+    "fiyat": 127,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Himalaya Crystal",
+    "kalinlikMm": 12,
+    "fiyat": 127,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Layla",
+    "kalinlikMm": 12,
+    "fiyat": 127,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Nero Zimbabwe",
+    "kalinlikMm": 12,
+    "fiyat": 127,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Rapolano",
+    "kalinlikMm": 12,
+    "fiyat": 127,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Strata Argentum",
+    "kalinlikMm": 12,
+    "fiyat": 127,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Amazonico",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta Gold",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Mont Blanc",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Retrostone",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Whitesands",
+    "kalinlikMm": 12,
+    "fiyat": 150,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Arena",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Aspen Grey",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Azure",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Barro",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Basalt Black",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Basalt Grey",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Beton",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Black Obsession",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Blanco Carrara",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Cappadocia Sunset",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Cement",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Estatuario 01",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Ignea",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Just White",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Krater",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "La Boheme",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Mar Del Plata",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Metropolitan",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Nero",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "New York",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Niagara",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Phedra",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Pietra Grey",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Pulpis",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Rapolano",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Summer Dala",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Terrazo Ceppo",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Toscano",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Winter Dala",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Wulong",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Zaha Stone",
+    "kalinlikMm": 12,
+    "fiyat": 165,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Abu Dhabi White",
+    "kalinlikMm": 12,
+    "fiyat": 167,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta Gold",
+    "kalinlikMm": 12,
+    "fiyat": 167,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta Luxe",
+    "kalinlikMm": 12,
+    "fiyat": 167,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Himalaya Crystal",
+    "kalinlikMm": 12,
+    "fiyat": 167,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Iron Corten",
+    "kalinlikMm": 12,
+    "fiyat": 167,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Alexandra",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Arabesque",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Arctic White",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta Luxe",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta Royale",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calista",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Colorado Dunes",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Estatuario",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Himalaya Crystal",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Iron Copper",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Iron Frost",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Iron Grey",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Layla",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Niagara",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "San Simone",
+    "kalinlikMm": 12,
+    "fiyat": 195,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Alexandra",
+    "kalinlikMm": 12,
+    "fiyat": 220,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Arabesque",
+    "kalinlikMm": 12,
+    "fiyat": 220,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Calacatta Royale",
+    "kalinlikMm": 12,
+    "fiyat": 220,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Colorado Dunes",
+    "kalinlikMm": 12,
+    "fiyat": 220,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "Everest Sunrise",
+    "kalinlikMm": 12,
+    "fiyat": 220,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "San Simone",
+    "kalinlikMm": 12,
+    "fiyat": 220,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "NEOLITH",
+    "renk": "White Haven",
+    "kalinlikMm": 12,
+    "fiyat": 220,
+    "paraBirimi": "EUR",
+    "boyut": 5.12
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Blaze Iron Matte",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Noce Canaletto Matte",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Absolute Black Matte",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Absolute White Matte",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Boost Grey Hammered",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Boost Natural Ecru Hammered",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Boost Smoke Hammered",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Boost Stone Ivory Hammered",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Boost White Hammered",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Travertino Sand Hammered",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Travertino Pearl Hammered",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Boost Mineral Grey Hammered",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Basaltina Volcano Hammered",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Boost Tarmac Hammered",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Kone Mix Hammered",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Soapstone Dark Hammered",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Cream Prestige Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Grey Stone Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Light Grey Stone Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Fior di Bosco Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Fior di Bosco Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Precious Brown Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Precious Brown Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Delicato Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Extra Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Extra Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Imperiale Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Imperiale Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Prestigio Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Prestigio Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Statuario Supremo Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Statuario Supremo Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Bernini Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Bernini Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Apuano Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Apuano Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "White Cloud Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Nero Marquina Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Nero Marquina Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Black Atlantis Silk 162x324 cm",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Black Atlantis Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Meraviglia Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Meraviglia Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Onyx White Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Onyx White Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Gold Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Gold Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Crystal White Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Crystal White Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Desert Soul Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Desert Soul Bookmatch Silk",
+    "kalinlikMm": 12,
+    "fiyat": 10196,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Bianco Dolomite Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Antique Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Antique Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Extra Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Extra Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Imperiale Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Imperiale Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Bernini Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Bernini Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Apuano Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Apuano Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Statuario Supremo Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Statuario Supremo Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Fior di Bosco Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Fior di Bosco Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Nero Marquina Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Nero Marquina Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Black Atlantis Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Black Atlantis Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Onyx White Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Onyx White Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Meraviglia Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Meraviglia Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Gold Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Gold Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Absolute White Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Desert Soul Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Desert Soul Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Crystal White Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Crystal White Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Exotic Green Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Exotic Green Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Exotic Wave Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Exotic Wave Bookmatch Polished",
+    "kalinlikMm": 12,
+    "fiyat": 10924,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Extra Polished 159x324 cm",
+    "kalinlikMm": 20,
+    "fiyat": 19008,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Extra Bookmatch Polished 159x324 cm",
+    "kalinlikMm": 20,
+    "fiyat": 19008,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Crystal White Polished 159x324cm",
+    "kalinlikMm": 20,
+    "fiyat": 19008,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Bianco Dolomite Polished 159x324 cm",
+    "kalinlikMm": 20,
+    "fiyat": 19008,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Crystal White Bookmatch Polished 159x324cm",
+    "kalinlikMm": 20,
+    "fiyat": 19008,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Desert Soul Polished",
+    "kalinlikMm": 20,
+    "fiyat": 19008,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Desert Soul Bookmatch Polished",
+    "kalinlikMm": 20,
+    "fiyat": 19008,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Bernini Polished NATURA VEIN 159x324cm",
+    "kalinlikMm": 20,
+    "fiyat": 23328,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Extra Polished NATURA VEIN 159x324cm",
+    "kalinlikMm": 20,
+    "fiyat": 23328,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Imperiale Polished NATURA VEIN 159x324cm 20mm",
+    "kalinlikMm": 20,
+    "fiyat": 23328,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Statuario Supremo Polished NATURA VEIN 159x324cm 20mm",
+    "kalinlikMm": 20,
+    "fiyat": 23328,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Gold Polished NATURA VEIN 159x324cm",
+    "kalinlikMm": 20,
+    "fiyat": 23328,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Basaltina Volcano Hammered",
+    "kalinlikMm": 20,
+    "fiyat": 15984,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Soapstone Dark Hammered",
+    "kalinlikMm": 20,
+    "fiyat": 15984,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Absolute White Matte 159x324 cm",
+    "kalinlikMm": 20,
+    "fiyat": 17664,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Grey Stone Matte",
+    "kalinlikMm": 20,
+    "fiyat": 17664,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Extra Matte 159x324 cm",
+    "kalinlikMm": 20,
+    "fiyat": 17664,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Extra Bookmatch Matte 159x324 cm",
+    "kalinlikMm": 20,
+    "fiyat": 17664,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Nero Marquina Matte",
+    "kalinlikMm": 20,
+    "fiyat": 17664,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Black Lava Leathered",
+    "kalinlikMm": 20,
+    "fiyat": 17664,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Extra Matte NATURA VEIN 159X324cm",
+    "kalinlikMm": 20,
+    "fiyat": 20448,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Imperiale Matte NATURA VEIN 159X324cm",
+    "kalinlikMm": 20,
+    "fiyat": 20448,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Statuario Supremo Matte NATURA VEIN 159x324cm",
+    "kalinlikMm": 20,
+    "fiyat": 20448,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "ATLASPLAN",
+    "renk": "Calacatta Bernini Matte NATURA VEIN 159x324cm",
+    "kalinlikMm": 20,
+    "fiyat": 20448,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Noir Desir",
+    "kalinlikMm": 12,
+    "fiyat": 192.5,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Bianco Statuario Venato Bookmatch",
+    "kalinlikMm": 12,
+    "fiyat": 192.5,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Calacatta Michelangelo Bookmatch",
+    "kalinlikMm": 12,
+    "fiyat": 192.5,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Calacatta Oro Venato Bookmatch",
+    "kalinlikMm": 12,
+    "fiyat": 192.5,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Nero Greco",
+    "kalinlikMm": 12,
+    "fiyat": 192.5,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Pietra Grey",
+    "kalinlikMm": 12,
+    "fiyat": 192.5,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Pietra di Savoia Antracite",
+    "kalinlikMm": 12,
+    "fiyat": 177.1,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Pietra di Savoia Grigio",
+    "kalinlikMm": 12,
+    "fiyat": 177.1,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Diamond Cream",
+    "kalinlikMm": 12,
+    "fiyat": 192.5,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Ossido Nero",
+    "kalinlikMm": 12,
+    "fiyat": 162.39999999999998,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Ossido Bruno",
+    "kalinlikMm": 12,
+    "fiyat": 162.39999999999998,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Ardesia Bianco Spacco",
+    "kalinlikMm": 12,
+    "fiyat": 177.1,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Oxide Nero (Limited Edition)",
+    "kalinlikMm": 12,
+    "fiyat": 177.1,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Oxide Moro (Limited Edition)",
+    "kalinlikMm": 12,
+    "fiyat": 177.1,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Pietra di Cardoso Grigio Fiammato",
+    "kalinlikMm": 12,
+    "fiyat": 177.1,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Pietra Piasantina Grigio Fiammato",
+    "kalinlikMm": 12,
+    "fiyat": 177.1,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Pietra Piasantina Nero Fiammato",
+    "kalinlikMm": 12,
+    "fiyat": 177.1,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Fokos Piombo",
+    "kalinlikMm": 12,
+    "fiyat": 162.39999999999998,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Fokos Sale",
+    "kalinlikMm": 12,
+    "fiyat": 162.39999999999998,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Nero Assoluto",
+    "kalinlikMm": 12,
+    "fiyat": 162.39999999999998,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Bianco Assoluto",
+    "kalinlikMm": 12,
+    "fiyat": 162.39999999999998,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Calce Bianco",
+    "kalinlikMm": 12,
+    "fiyat": 162.39999999999998,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Calce Nero",
+    "kalinlikMm": 12,
+    "fiyat": 162.39999999999998,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Legno Venezia Sabbia",
+    "kalinlikMm": 12,
+    "fiyat": 177.1,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Fokos Rena",
+    "kalinlikMm": 12,
+    "fiyat": 162.39999999999998,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Arabescato Oro",
+    "kalinlikMm": 12,
+    "fiyat": 140,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Michelangelo Caprese",
+    "kalinlikMm": 12,
+    "fiyat": 140,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Marmorino Oro",
+    "kalinlikMm": 12,
+    "fiyat": 140,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Carrara",
+    "kalinlikMm": 12,
+    "fiyat": 140,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Statuario Allegra",
+    "kalinlikMm": 12,
+    "fiyat": 140,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Nero Marquina",
+    "kalinlikMm": 12,
+    "fiyat": 140,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Saint Laurent",
+    "kalinlikMm": 12,
+    "fiyat": 118.99999999999999,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Cemento Grigio Mat",
+    "kalinlikMm": 12,
+    "fiyat": 125.99999999999999,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Breccia Beige",
+    "kalinlikMm": 12,
+    "fiyat": 118.99999999999999,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Bardiglio Grigio",
+    "kalinlikMm": 12,
+    "fiyat": 140,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Basalto Nero",
+    "kalinlikMm": 12,
+    "fiyat": 118.99999999999999,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Calacatta Puro",
+    "kalinlikMm": 12,
+    "fiyat": 118.99999999999999,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Plant Brown",
+    "kalinlikMm": 12,
+    "fiyat": 118.99999999999999,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "PORSELEN",
+    "marka": "LAMINAM",
+    "renk": "Grey Marble",
+    "kalinlikMm": 12,
+    "fiyat": 125.99999999999999,
+    "paraBirimi": "EUR",
+    "boyut": 5.21
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "ELIXIR WHITE",
+    "kalinlikMm": 15,
+    "fiyat": 2266.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "FORZA FUME",
+    "kalinlikMm": 15,
+    "fiyat": 2266.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "VOLCANO BLACK",
+    "kalinlikMm": 15,
+    "fiyat": 2266.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "FAIRY WHITE",
+    "kalinlikMm": 15,
+    "fiyat": 2608.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "ASHEN",
+    "kalinlikMm": 15,
+    "fiyat": 2608.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "JULIET WHITE",
+    "kalinlikMm": 15,
+    "fiyat": 2608.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "KRISTELLA WHITE",
+    "kalinlikMm": 15,
+    "fiyat": 2608.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "GALA BLACK",
+    "kalinlikMm": 15,
+    "fiyat": 2608.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "MONTANA",
+    "kalinlikMm": 15,
+    "fiyat": 2946.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "AIZANO",
+    "kalinlikMm": 15,
+    "fiyat": 2946.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "BABILON",
+    "kalinlikMm": 15,
+    "fiyat": 2946.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "METROPOL GREY",
+    "kalinlikMm": 15,
+    "fiyat": 2946.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "ANEMON",
+    "kalinlikMm": 15,
+    "fiyat": 2946.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "PARMA",
+    "kalinlikMm": 15,
+    "fiyat": 2946.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "MOCCA MOUSSE",
+    "kalinlikMm": 15,
+    "fiyat": 2946.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "BELLUNO",
+    "kalinlikMm": 15,
+    "fiyat": 2946.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "POLARIS",
+    "kalinlikMm": 15,
+    "fiyat": 3116.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "BOLETUS",
+    "kalinlikMm": 15,
+    "fiyat": 3116.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "ALINDA",
+    "kalinlikMm": 15,
+    "fiyat": 3116.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "SPA BLACK",
+    "kalinlikMm": 15,
+    "fiyat": 3116.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "CASHMERE WHITE",
+    "kalinlikMm": 15,
+    "fiyat": 3116.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "PIXIE WINGS",
+    "kalinlikMm": 15,
+    "fiyat": 3116.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "TERRE GREY",
+    "kalinlikMm": 15,
+    "fiyat": 3116.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "RETRO",
+    "kalinlikMm": 15,
+    "fiyat": 3116.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "CHARMY",
+    "kalinlikMm": 15,
+    "fiyat": 3116.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "ASPENDOS",
+    "kalinlikMm": 15,
+    "fiyat": 3116.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "CHAKRA",
+    "kalinlikMm": 15,
+    "fiyat": 3116.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "OLYMPOS",
+    "kalinlikMm": 15,
+    "fiyat": 3116.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "PERLA",
+    "kalinlikMm": 15,
+    "fiyat": 3400,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "CAROLA",
+    "kalinlikMm": 15,
+    "fiyat": 3400,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "ICEBERG",
+    "kalinlikMm": 15,
+    "fiyat": 3400,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "MARQUINA TIERRA",
+    "kalinlikMm": 15,
+    "fiyat": 3400,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "PALETINO",
+    "kalinlikMm": 15,
+    "fiyat": 3400,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "STATUARIO CRUX",
+    "kalinlikMm": 15,
+    "fiyat": 3400,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "CALACATTA VENEZIA",
+    "kalinlikMm": 15,
+    "fiyat": 3400,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "PANTHEON",
+    "kalinlikMm": 15,
+    "fiyat": 3400,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "CALACATTA VENETO",
+    "kalinlikMm": 15,
+    "fiyat": 3400,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "CALACATTA VICTORY",
+    "kalinlikMm": 15,
+    "fiyat": 3400,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "TEOS",
+    "kalinlikMm": 15,
+    "fiyat": 3400,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "BELENCO",
+    "renk": "DAPHNE CRACK",
+    "kalinlikMm": 15,
+    "fiyat": 3400,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "ARCADIA",
+    "kalinlikMm": 20,
+    "fiyat": 3250,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "BOREAS",
+    "kalinlikMm": 20,
+    "fiyat": 3250,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "LAPLAND",
+    "kalinlikMm": 20,
+    "fiyat": 3500,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "BARENTS",
+    "kalinlikMm": 20,
+    "fiyat": 3500,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "MEIS (145*305)",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "ALPIN (145*305)",
+    "kalinlikMm": 20,
+    "fiyat": 3966.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "TIBER (145*305)",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "SOLI (145*305)",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "SINASOS (145*305)",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "LAPAZ",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "LEBEDOS",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "MORA",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "SAVANA",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "ELVAS",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "SMYRNA",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "TUNDRA",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "TROAS",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "VERSILIA",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "OLYMPOS",
+    "kalinlikMm": 20,
+    "fiyat": 3633.3333333333335,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "AMANOS",
+    "kalinlikMm": 20,
+    "fiyat": 3966.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "PIRAN",
+    "kalinlikMm": 20,
+    "fiyat": 3966.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "NEOPOLIS",
+    "kalinlikMm": 20,
+    "fiyat": 3966.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "ETNA",
+    "kalinlikMm": 20,
+    "fiyat": 3966.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "IGLO",
+    "kalinlikMm": 20,
+    "fiyat": 3966.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "FUGA",
+    "kalinlikMm": 20,
+    "fiyat": 3966.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "ALPINO",
+    "kalinlikMm": 20,
+    "fiyat": 3966.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "MIRAT",
+    "kalinlikMm": 20,
+    "fiyat": 3966.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "LARANDA",
+    "kalinlikMm": 20,
+    "fiyat": 3966.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "TERRA",
+    "kalinlikMm": 20,
+    "fiyat": 3966.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "ARES",
+    "kalinlikMm": 20,
+    "fiyat": 3966.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "MILOS (145*305)",
+    "kalinlikMm": 20,
+    "fiyat": 4333.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "KATANYA (145*305)",
+    "kalinlikMm": 20,
+    "fiyat": 4883.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "PETRA (145*305)",
+    "kalinlikMm": 20,
+    "fiyat": 4333.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "LINEN",
+    "kalinlikMm": 20,
+    "fiyat": 4333.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "ARARAT",
+    "kalinlikMm": 20,
+    "fiyat": 4333.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "HERMES",
+    "kalinlikMm": 20,
+    "fiyat": 4333.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "TOROS",
+    "kalinlikMm": 20,
+    "fiyat": 4333.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "SINEDA",
+    "kalinlikMm": 20,
+    "fiyat": 4333.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "CARBONE",
+    "kalinlikMm": 20,
+    "fiyat": 4333.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "ARTEMIS",
+    "kalinlikMm": 20,
+    "fiyat": 4883.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "NEBULA",
+    "kalinlikMm": 20,
+    "fiyat": 4883.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "APOLLON (145*305)",
+    "kalinlikMm": 20,
+    "fiyat": 4883.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "PIASTRA (145*305)",
+    "kalinlikMm": 20,
+    "fiyat": 4883.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "SERRONE (145*305)",
+    "kalinlikMm": 20,
+    "fiyat": 4883.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "HIERAPOLIS",
+    "kalinlikMm": 20,
+    "fiyat": 6450,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "GHARMA",
+    "kalinlikMm": 20,
+    "fiyat": 6450,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "OPUS",
+    "kalinlikMm": 20,
+    "fiyat": 4533.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "LEPTIS MAGNA",
+    "kalinlikMm": 20,
+    "fiyat": 4533.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "ANI",
+    "kalinlikMm": 20,
+    "fiyat": 4533.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "EVEREST",
+    "kalinlikMm": 20,
+    "fiyat": 4533.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "MESA VERDE",
+    "kalinlikMm": 20,
+    "fiyat": 4533.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "AMBER",
+    "kalinlikMm": 20,
+    "fiyat": 4533.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "POMPEI",
+    "kalinlikMm": 20,
+    "fiyat": 4533.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "HATRA",
+    "kalinlikMm": 20,
+    "fiyat": 4533.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "PODIMA",
+    "kalinlikMm": 20,
+    "fiyat": 4533.333333333334,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "CALACATTA NIF",
+    "kalinlikMm": 20,
+    "fiyat": 4866.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "CALACATTA ANKA",
+    "kalinlikMm": 20,
+    "fiyat": 4866.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "CALACATTA TIKAL",
+    "kalinlikMm": 20,
+    "fiyat": 4866.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "CALACATTA LAL",
+    "kalinlikMm": 20,
+    "fiyat": 4866.666666666667,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "ATLANTIS",
+    "kalinlikMm": 20,
+    "fiyat": 5700,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "APATIT",
+    "kalinlikMm": 20,
+    "fiyat": 5700,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "KALSEDON",
+    "kalinlikMm": 20,
+    "fiyat": 5700,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "CIMSTONE",
+    "renk": "ARPELS",
+    "kalinlikMm": 20,
+    "fiyat": 5700,
+    "paraBirimi": "TRY",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Arden Blue",
+    "kalinlikMm": 20,
+    "fiyat": 3208,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Arden Blue",
+    "kalinlikMm": 30,
+    "fiyat": 3749,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Cemento",
+    "kalinlikMm": 20,
+    "fiyat": 3700,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Cemento",
+    "kalinlikMm": 30,
+    "fiyat": 4315,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Desert Silver",
+    "kalinlikMm": 20,
+    "fiyat": 4053,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Desert Silver",
+    "kalinlikMm": 30,
+    "fiyat": 4705,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Blanco Zeus",
+    "kalinlikMm": 20,
+    "fiyat": 4715,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Blanco Zeus",
+    "kalinlikMm": 30,
+    "fiyat": 6291,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Charcoal Soapstone",
+    "kalinlikMm": 20,
+    "fiyat": 4715,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Charcoal Soapstone",
+    "kalinlikMm": 30,
+    "fiyat": 6291,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Classic Calacatta",
+    "kalinlikMm": 20,
+    "fiyat": 4715,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Classic Calacatta",
+    "kalinlikMm": 30,
+    "fiyat": 6291,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Et. Serena",
+    "kalinlikMm": 20,
+    "fiyat": 4715,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Et. Serena",
+    "kalinlikMm": 30,
+    "fiyat": 6291,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Lyra",
+    "kalinlikMm": 20,
+    "fiyat": 4715,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Lyra",
+    "kalinlikMm": 30,
+    "fiyat": 6291,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Pearl Jasmine",
+    "kalinlikMm": 20,
+    "fiyat": 4715,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Pearl Jasmine",
+    "kalinlikMm": 30,
+    "fiyat": 6291,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Calypso",
+    "kalinlikMm": 20,
+    "fiyat": 5191,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Calypso",
+    "kalinlikMm": 30,
+    "fiyat": 6928,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Et. Calacatta Gold",
+    "kalinlikMm": 20,
+    "fiyat": 6284,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Et. Calacatta Gold",
+    "kalinlikMm": 30,
+    "fiyat": 8384,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Eclectic Pearl",
+    "kalinlikMm": 20,
+    "fiyat": 7068,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "KUVARS",
+    "marka": "SILESTONE",
+    "renk": "Eclectic Pearl",
+    "kalinlikMm": 30,
+    "fiyat": 9430,
+    "paraBirimi": "EUR",
+    "boyut": 4.5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Afyon Gri",
+    "kalinlikMm": 20,
+    "fiyat": 500,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Afyon Gri",
+    "kalinlikMm": 30,
+    "fiyat": 650,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Burdur Bej",
+    "kalinlikMm": 20,
+    "fiyat": 800,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Burdur Bej",
+    "kalinlikMm": 30,
+    "fiyat": 1040,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Sandian Bej",
+    "kalinlikMm": 20,
+    "fiyat": 1000,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Sandian Bej",
+    "kalinlikMm": 30,
+    "fiyat": 1300,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Tundra Gri",
+    "kalinlikMm": 20,
+    "fiyat": 1200,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Tundra Gri",
+    "kalinlikMm": 30,
+    "fiyat": 1500,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Bursa Siyah",
+    "kalinlikMm": 20,
+    "fiyat": 700,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Bursa Siyah",
+    "kalinlikMm": 30,
+    "fiyat": 910,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Traverten",
+    "kalinlikMm": 20,
+    "fiyat": 1000,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Traverten",
+    "kalinlikMm": 30,
+    "fiyat": 1300,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Mugla Beyaz",
+    "kalinlikMm": 20,
+    "fiyat": 1200,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Mugla Beyaz",
+    "kalinlikMm": 30,
+    "fiyat": 1440,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Bazalt",
+    "kalinlikMm": 20,
+    "fiyat": 1500,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Tasin adi",
+    "kalinlikMm": 20,
+    "fiyat": 30,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Tasin adi",
+    "kalinlikMm": 30,
+    "fiyat": 60,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Bazalt",
+    "kalinlikMm": 20,
+    "fiyat": 1400,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Bazalt",
+    "kalinlikMm": 30,
+    "fiyat": 1850,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "TRAVERTEN VEIN CUT",
+    "kalinlikMm": 20,
+    "fiyat": 150,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "TRAVERTEN CROS CUT",
+    "kalinlikMm": 20,
+    "fiyat": 50,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Light Antik Eskitme",
+    "kalinlikMm": 20,
+    "fiyat": 640,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Antik Eskitme",
+    "kalinlikMm": 20,
+    "fiyat": 520,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Natural Eskitme",
+    "kalinlikMm": 20,
+    "fiyat": 420,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "MERMER",
+    "marka": "MERMER",
+    "renk": "Natural Eskitme Patinato",
+    "kalinlikMm": 20,
+    "fiyat": 350,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "GRANİT",
+    "marka": "GRANİT",
+    "renk": "Ash Black",
+    "kalinlikMm": 20,
+    "fiyat": 2160,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "GRANİT",
+    "marka": "GRANİT",
+    "renk": "Star Galaxy",
+    "kalinlikMm": 20,
+    "fiyat": 2500,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "GRANİT",
+    "marka": "GRANİT",
+    "renk": "Rosamino",
+    "kalinlikMm": 20,
+    "fiyat": 1440,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "GRANİT",
+    "marka": "GRANİT",
+    "renk": "Brezilya Granit",
+    "kalinlikMm": 20,
+    "fiyat": 1400,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "GRANİT",
+    "marka": "GRANİT",
+    "renk": "MISIR GRANIT",
+    "kalinlikMm": 20,
+    "fiyat": 815,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  },
+  {
+    "kategori": "GRANİT",
+    "marka": "GRANİT",
+    "renk": "ABSOLITH",
+    "kalinlikMm": 20,
+    "fiyat": 2800,
+    "paraBirimi": "TRY",
+    "boyut": 5
+  }
+]

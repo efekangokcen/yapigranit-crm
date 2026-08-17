@@ -1,0 +1,1238 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─── Durum sözlükleri ────────────────────────────────────────────────────────
+// Bu alanlar önce serbest `String` idi; canlıda `CostCalculation.status` hem
+// 'approved' hem 'onaylandi' tutar hale gelmiş ve etiketi olmayan değer ekranda
+// boş rozet olarak görünüyordu. Enum, geçersiz değeri hem derlemede hem
+// veritabanında imkânsız kılar. Etiket/renk karşılıkları: src/lib/constants.ts
+
+/// Maliyet hesabı ve teklif ortak yaşam döngüsü
+enum DocumentStatus {
+  draft
+  sent
+  approved
+  rejected
+  expired
+}
+
+enum ContractStatus {
+  pending
+  active
+  measurement
+  cutting
+  completed
+  cancelled
+}
+
+enum ContractItemStatus {
+  taslak
+  olcuye_gonderildi
+  blocked
+  olcu_onaylandi
+  ready
+  in_production
+  atolye_tamamlandi
+  montaja_gonderildi
+  completed
+  cancelled
+}
+
+enum PaymentDurum {
+  taslak
+  bekleniyor
+  alindi
+  gecikti
+  iptal
+}
+
+enum CustomerDurum {
+  on_kayit
+  aktif
+  pasif
+  karaliste
+}
+
+/// Müşteri ve maliyet hesabının ortak süreç aşaması (sırayla ilerler)
+enum Surec {
+  on_kayit
+  maliyet
+  teklif
+  sozlesme
+  olcu
+  fabrika
+  montaj
+  teslim
+}
+
+/// available → revize (teklifte ayrıldı) → reserved (sözleşmeye bağlı) → cutting → used
+/// pending = ürün girildi, henüz depoya alınmadı (eski uygulamadaki stok.durum = 0)
+/// TasTakip iki farklı kaydı tutar:
+///  - satilan        : sözleşmenin taş ihtiyacı defteri (otomatik güncellenir,
+///                     contractId doludur) VEYA elle girilmiş serbest kayıt
+///                     (contractId boştur — bkz. satilan-table.tsx)
+///  - satin_alinacak : stokta karşılığı olmayan ihtiyaç → satın alma listesi
+/// Stok tanım listeleri — eski uygulamada her biri ayrı tabloydu
+/// (UrunGrubu, Marka, Model, Renk, YuzeyTipi, Sekil); burada tek tabloda
+/// `tur` ile ayrılır. Tanımlamalar ekranından yönetilir.
+enum StoneDefinitionTur {
+  urun_grubu
+  marka
+  model
+  renk
+  yuzey
+  sekil
+}
+
+enum TasTakipTur {
+  satilan
+  satin_alinacak
+}
+
+enum SlabStatus {
+  pending
+  available
+  revize
+  reserved
+  cutting
+  used
+  damaged
+}
+
+// ─── Finans ──────────────────────────────────────────────────────────────────
+
+/// Bir cari birden fazla rol taşıyabilir: aynı firma hem müşterimiz hem
+/// tedarikçimiz olabiliyor (Excel'de "E K MERMER" hem KASA'da hem CARİLER
+/// ALIŞ'ta geçiyor). Bu yüzden tek değer değil, dizi olarak tutulur.
+enum CariTur {
+  musteri
+  tedarikci
+  montajci
+  taseron
+  personel
+  diger
+}
+
+enum CariDurum {
+  aktif
+  pasif
+  /// Tahsili şüpheli — eski ŞÜPHELİ ALACAKLAR dosyasının karşılığı.
+  /// Ayrı bir tablo değil, cari üzerinde bir durum + not.
+  supheli
+}
+
+/// Cari hareketin yönü. Borç = cari bize borçlandı (satış, iş),
+/// Alacak = biz cariye borçlandık ya da cari ödedi (alış, tahsilat).
+enum CariYon {
+  borc
+  alacak
+}
+
+/// Hareketi doğuran belge/işlem türü.
+enum CariBelgeTuru {
+  devir
+  satis
+  alis
+  tahsilat
+  odeme
+  /// Karşılıklı alışverişte borçların birbirini kapatması — arada nakit DÖNMEZ,
+  /// bu yüzden hiçbir kasa/banka hesabına dokunmaz.
+  mahsup
+  masraf
+  duzeltme
+}
+
+enum HesapTuru {
+  kasa
+  banka
+  /// Bankanın kredili mevduat (esnek) hesabı — KASA dosyasında ayrı satır olarak
+  /// tutuluyordu ve "mevcut nakit" hesabı bu ayrımı gerektiriyor.
+  esnek_hesap
+  kredi_karti
+}
+
+enum ParaBirimi {
+  TRY
+  USD
+  EUR
+}
+
+/// Hesabın kime ait olduğu — KASA dosyasında sağdaki grup kolonu (ŞİRKET / ŞAHSİ / EK LTD).
+enum HesapSahibi {
+  sirket
+  sahsi
+  ek_mermer
+}
+
+enum HesapYon {
+  giris
+  cikis
+}
+
+enum FinansYukumlulukTuru {
+  cek
+  senet
+  kredi_taksidi
+  kredi_karti
+  sgk
+  personel_maasi
+}
+
+enum FinansYukumlulukDurumu {
+  bekliyor
+  odendi
+  iptal
+}
+
+enum KiymetliEvrakYonu {
+  verilen
+  alinan
+}
+
+enum KiymetliEvrakDurumu {
+  portfoyde
+  bankada
+  ciro_edildi
+  tahsil_edildi
+  odendi
+  karsiliksiz
+  iptal
+}
+
+enum GiderDurumu {
+  planlandi
+  odendi
+  iptal
+}
+
+enum TahsilatBeklentiDurumu {
+  bekliyor
+  kismi
+  tahsil_edildi
+  gecikti
+  iptal
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  username     String   @unique
+  passwordHash String
+  displayName  String
+  role         String   @default("admin")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  activityLogs           ActivityLog[]
+  verifiedSlabs          StoneStockSlab[]   @relation("SlabVerifier")
+  cariHareketleri        CariHareket[]      @relation("CariHareketOlusturan")
+  hesapHareketleri       HesapHareketi[]    @relation("HesapHareketiOlusturan")
+  finansYukumlulukleri   FinansYukumluluk[]
+  giderSorumluluklari    Gider[]
+  tahsilatSorumluluklari BeklenenTahsilat[]
+  vadeDegisiklikleri     PaymentVadeDegisikligi[]
+
+  @@index([username])
+}
+
+model ActivityLog {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+  action    String // CREATE, UPDATE, DELETE, LOGIN, APPROVE, REJECT
+  entity    String // Customer, Quote, Payment, Contract, CostCalculation
+  entityId  Int?
+  details   String? // JSON: { field: [eskiDeger, yeniDeger] }
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([entity])
+  @@index([createdAt])
+}
+
+model Customer {
+  id                Int           @id @default(autoincrement())
+  name              String
+  company           String?
+  phone             String?
+  email             String?
+  address           String?
+  notes             String?
+  durum             CustomerDurum @default(on_kayit)
+  kaynak            String? // walk_in, sosyal_medya, call_in, website, referans
+  referansAdi       String?
+  vergiNumarasi     String?
+  ilgilenenPersonel String?
+  surec             Surec         @default(on_kayit)
+  kategori          String        @default("bireysel") // bireysel, kurumsal
+  deletedAt         DateTime?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  costCalculations CostCalculation[]
+  payments         Payment[]
+  tasTakipler      TasTakip[]
+  stockSlabs       StoneStockSlab[]
+  measurementTasks MeasurementTask[]
+  revisionRequests RevisionRequest[]
+  contractItems    ContractItem[]
+  contracts        Contract[]
+  cari             Cari?
+
+  @@index([deletedAt])
+  @@index([durum])
+  @@index([surec])
+  @@index([createdAt])
+}
+
+model CostCalculation {
+  id               Int            @id @default(autoincrement())
+  customerId       Int
+  customer         Customer       @relation(fields: [customerId], references: [id])
+  title            String
+  status           DocumentStatus @default(draft)
+  invoiceRequested Boolean        @default(false)
+  profitMultiplier Float          @default(1.6)
+  surec            Surec          @default(maliyet)
+  arsivlendi       Boolean        @default(false)
+  iptalEdildi      Boolean        @default(false)
+
+  genelToplam              Float @default(0)
+  kdvYedirilmisToplam      Float @default(0)
+  kdvliToplam              Float @default(0)
+  karliToplam              Float @default(0)
+  kdvYedirilmisKarliToplam Float @default(0)
+  kdvliKarliToplam         Float @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  services         CostService[]
+  externalServices CostExternalService[]
+  products         CostProduct[]
+  quotes           Quote[]
+  measurementTasks MeasurementTask[]
+  revisionRequests RevisionRequest[]
+  contractItems    ContractItem[]
+
+  @@index([customerId])
+  @@index([surec])
+  @@index([arsivlendi])
+  @@index([updatedAt])
+}
+
+model CostService {
+  id                Int             @id @default(autoincrement())
+  costCalculationId Int
+  costCalculation   CostCalculation @relation(fields: [costCalculationId], references: [id], onDelete: Cascade)
+  serviceType       Int
+  workers           Int?
+  days              Float?
+  rate              Float
+  trips             Int?
+  distanceKm        Float?
+  vatMultiplier     Float           @default(1.0)
+  gercekMaliyet     Float           @default(0)
+  kdvliFiyat        Float           @default(0)
+}
+
+model CostExternalService {
+  id                Int             @id @default(autoincrement())
+  costCalculationId Int
+  costCalculation   CostCalculation @relation(fields: [costCalculationId], references: [id], onDelete: Cascade)
+  serviceKey        String
+  jobType           String
+  quantity          Float
+  unit              String
+  unitPrice         Float
+  gercekMaliyet     Float           @default(0)
+  kdvliFiyat        Float           @default(0)
+}
+
+model CostProduct {
+  id                Int             @id @default(autoincrement())
+  costCalculationId Int
+  costCalculation   CostCalculation @relation(fields: [costCalculationId], references: [id], onDelete: Cascade)
+  kategori          String?
+  marka             String?
+  renk              String?
+  toplamOlcu        Float           @default(0)
+  birim             String          @default("m2")
+  plakaAdet         Int             @default(1)
+  tasUcreti         Float           @default(0)
+  kalinlikMm        Int             @default(2)
+  fiyatFarki        Float           @default(0)
+  gercekMaliyet     Float           @default(0)
+  kdvliFiyat        Float           @default(0)
+
+  quoteItems    QuoteItem[]
+  contractItems ContractItem[]
+}
+
+model Quote {
+  id                Int             @id @default(autoincrement())
+  costCalculationId Int
+  costCalculation   CostCalculation @relation(fields: [costCalculationId], references: [id])
+  quoteNumber       String          @unique
+  yapilacakIs       String?
+  malzeme           String?
+  ilgiliKisi        String?
+  teslimat          String?
+  telefon           String?
+  mailAdresi        String?
+  customerNote      String?
+  discount          Float           @default(0)
+  toplam            Float           @default(0)
+  priceBasis        String          @default("karli") // karli, kdv_yedirilmis, kdvli
+  status            DocumentStatus  @default(draft)
+  currency          String          @default("TRY") // TRY, USD, EUR
+  exchangeRate      Float           @default(1.0) // 1 yabancı para = X TRY
+  validUntilDate    DateTime?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+
+  items      QuoteItem[]
+  extras     QuoteExtra[]
+  contract   Contract?
+  stockSlabs StoneStockSlab[]
+
+  @@index([costCalculationId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model Contract {
+  id             Int            @id @default(autoincrement())
+  quoteId        Int            @unique
+  quote          Quote          @relation(fields: [quoteId], references: [id])
+  /// Müşteriye doğrudan bağ. Zincir (Customer → CostCalculation → Quote → Contract)
+  /// üzerinden de türetilebilir ama müşteri/ödeme/stok ekranları bu yüzden 4 kademeli
+  /// include yapmak zorunda kalıyordu; bu alan tek sorguya indirir.
+  customerId     Int
+  customer       Customer       @relation(fields: [customerId], references: [id])
+  contractNumber String         @unique
+  status         ContractStatus @default(active)
+  odemeKosulu    String? // "Peşin %75, Teslimde %25" serbest metin
+  odemeYontemi   String? // nakit, havale_eft, kredi_karti, cek_senet
+  notes          String?
+  startDate      DateTime?
+  endDate        DateTime?
+  signatureDate  DateTime?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  payments         Payment[]
+  tasTakipler      TasTakip[]
+  stockSlabs       StoneStockSlab[]
+  measurementTasks MeasurementTask[]
+  revisionRequests RevisionRequest[]
+  notificationLogs NotificationLog[]
+  items            ContractItem[]
+  cariHareketleri  CariHareket[]
+
+  @@index([customerId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model TasTakip {
+  id         Int         @id @default(autoincrement())
+  tur        TasTakipTur
+  tarih      DateTime    @default(now())
+  islemAyi   String? // "2026-04" format
+  contractId Int?
+  contract   Contract?   @relation(fields: [contractId], references: [id])
+  customerId Int?
+  customer   Customer?   @relation(fields: [customerId], references: [id])
+  musteriAdi String?
+
+  // Taş bilgileri
+  marka    String?
+  renk     String?
+  yuzey    String?
+  kalinlik Float?
+  birim    String  @default("Plaka")
+  adet     Int?
+
+  // Satın alınacak alanları
+  gelecekYer  String?
+  satinAlindi Boolean @default(false)
+
+  // Satılan alanları
+  stok  Int?
+  kalan Int?
+
+  aktif     Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([contractId])
+  @@index([customerId])
+  @@index([tur])
+  @@index([satinAlindi])
+  @@index([aktif])
+  @@index([islemAyi])
+  @@index([createdAt])
+}
+
+model StoneStockSlab {
+  id                Int           @id @default(autoincrement())
+  barcode           String        @unique
+  kategori          String?
+  marka             String
+  renk              String
+  model             String?
+  yuzey             String?
+  kalinlik          Float?
+  en                Float?
+  boy               Float?
+  boyutM2           Float         @default(0)
+  kg                Float?
+  yogunluk          Float?
+  urunTipi          Int           @default(1) // 1 Plaka, 2 Döşeme, 3 Şekil
+  urunTipi2         Int           @default(1) // Plaka grubunda: 1 Plaka, 2 Parça
+  sekil             String?
+  kenarlar          Json?
+  resimler          Json?
+  etiketDurum       Boolean       @default(false)
+  etiketBasimTarihi DateTime?
+  /// Depo bağı — eski stok uygulamasındaki Depo tablosunun karşılığı (bkz. Warehouse).
+  /// `location` bu geçişten önce yazılmış serbest metin konumları taşıyor; yeni
+  /// kayıtlarda warehouseId doldurulur, location okunabilir kopya olarak kalır.
+  warehouseId       Int?
+  warehouse         Warehouse?    @relation(fields: [warehouseId], references: [id])
+  location          String?
+  /// Eski PHP stok uygulamasından taşınan kaydın `stok.id` değeri — tekrar içe
+  /// aktarımda aynı plakanın iki kez oluşmasını engeller.
+  legacyStokId      Int?          @unique
+  /// Sayım/denetim işaretleri: needsAudit true ise plaka fiziksel doğrulama bekliyor.
+  needsAudit        Boolean       @default(false)
+  verifiedAt        DateTime?
+  verifiedByUserId  Int?
+  verifiedBy        User?         @relation("SlabVerifier", fields: [verifiedByUserId], references: [id])
+  /// Şekil (urunTipi=3) çizim verisi ve düz metin görsel listesi — eski uygulamadaki
+  /// `sekil`/`resimler` alanlarının serbest biçimli karşılığı.
+  shapeData         String?
+  images            String?
+  supplier          String?
+  purchaseDate      DateTime?
+  purchasePrice     Float?
+  // available, revize (teklif aşamasında ayrılan, henüz sözleşmeye dönmemiş),
+  // reserved (sözleşmeye bağlı, kesilecek), cutting, used, damaged
+  status            SlabStatus    @default(available)
+  customerId        Int?
+  customer          Customer?     @relation(fields: [customerId], references: [id])
+  contractId        Int?
+  contract          Contract?     @relation(fields: [contractId], references: [id])
+  quoteId           Int?
+  quote             Quote?        @relation(fields: [quoteId], references: [id])
+  costCalculationId Int?
+  contractItemId    Int?
+  contractItem      ContractItem? @relation(fields: [contractItemId], references: [id])
+  usedAt            DateTime?
+  projeAdi          String?
+  teklifNo          String?
+  seriNo            String?
+  notes             String?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  movements StoneStockMovement[]
+
+  @@index([barcode])
+  @@index([marka])
+  @@index([renk])
+  @@index([status])
+  @@index([contractId])
+  @@index([customerId])
+  @@index([costCalculationId])
+  @@index([quoteId])
+  @@index([contractItemId])
+  @@index([needsAudit])
+  @@index([urunTipi])
+  @@index([urunTipi2])
+  @@index([warehouseId])
+}
+
+/// Depo tanımı — eski stok uygulamasındaki `Depo` tablosunun karşılığı.
+/// `legacyCode` eski uygulamanın depo barkodudur: "Depoya Ekle" ekranında plaka
+/// barkodları okutulduktan sonra bu barkod okutularak plakalar depoya yerleşir.
+model Warehouse {
+  id         Int      @id @default(autoincrement())
+  name       String   @unique
+  legacyCode String?
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @default(now())
+
+  slabs StoneStockSlab[]
+
+  @@index([isActive])
+}
+
+model StoneStockMovement {
+  id                Int            @id @default(autoincrement())
+  slabId            Int
+  slab              StoneStockSlab @relation(fields: [slabId], references: [id], onDelete: Cascade)
+  action            String // stock_in, reserve, use, release, adjust
+  fromStatus        String?
+  toStatus          String?
+  contractId        Int?
+  customerId        Int?
+  costCalculationId Int?
+  contractItemId    Int?
+  contractItem      ContractItem?  @relation(fields: [contractItemId], references: [id])
+  note              String?
+  createdAt         DateTime       @default(now())
+
+  @@index([slabId])
+  @@index([action])
+  @@index([createdAt])
+  @@index([contractId])
+  @@index([costCalculationId])
+  @@index([contractItemId])
+}
+
+model MeasurementTask {
+  id                Int             @id @default(autoincrement())
+  customerId        Int
+  customer          Customer        @relation(fields: [customerId], references: [id])
+  contractId        Int
+  contract          Contract        @relation(fields: [contractId], references: [id])
+  costCalculationId Int
+  costCalculation   CostCalculation @relation(fields: [costCalculationId], references: [id])
+  contractItemId    Int?
+  contractItem      ContractItem?   @relation(fields: [contractItemId], references: [id])
+  assignedTeam      String?
+  appointmentAt     DateTime?
+  address           String?
+  contactName       String?
+  contactPhone      String?
+  jobNote           String?
+  requiredNotes     String?
+  status            String          @default("open") // open, scheduled, completed, revision_required, cancelled
+  notificationSent  Boolean         @default(false)
+  completedAt       DateTime?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+
+  results MeasurementResult[]
+
+  @@index([customerId])
+  @@index([contractId])
+  @@index([costCalculationId])
+  @@index([contractItemId])
+  @@index([status])
+  @@index([appointmentAt])
+}
+
+model MeasurementResult {
+  id               Int             @id @default(autoincrement())
+  taskId           Int
+  task             MeasurementTask @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  oldMeasure       String?
+  newMeasure       String?
+  differenceReason String?
+  fieldNotes       String?
+  photoUrls        String?
+  hasDifference    Boolean         @default(false)
+  // JSON: [{ quoteItemId, yapilacakIs, tasCinsi, oldEn, oldBoy, newEn, newBoy, hasDifference }]
+  itemMeasurements String?
+  createdAt        DateTime        @default(now())
+
+  @@index([taskId])
+  @@index([hasDifference])
+}
+
+model RevisionRequest {
+  id                Int             @id @default(autoincrement())
+  customerId        Int
+  customer          Customer        @relation(fields: [customerId], references: [id])
+  contractId        Int
+  contract          Contract        @relation(fields: [contractId], references: [id])
+  costCalculationId Int
+  costCalculation   CostCalculation @relation(fields: [costCalculationId], references: [id])
+  contractItemId    Int?
+  contractItem      ContractItem?   @relation(fields: [contractItemId], references: [id])
+  reason            String
+  oldValue          String?
+  newValue          String?
+  impact            String?
+  owner             String?
+  priority          String          @default("normal") // low, normal, high
+  status            String          @default("open") // open, in_review, approved, rejected, closed
+  approvedAt        DateTime?
+  closedAt          DateTime?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+
+  @@index([customerId])
+  @@index([contractId])
+  @@index([costCalculationId])
+  @@index([contractItemId])
+  @@index([status])
+  @@index([priority])
+}
+
+model NotificationLog {
+  id             Int       @id @default(autoincrement())
+  contractId     Int?
+  contract       Contract? @relation(fields: [contractId], references: [id])
+  target         String
+  source         String?
+  event          String
+  message        String
+  channel        String?
+  read           Boolean   @default(false)
+  actionRequired Boolean   @default(false)
+  createdAt      DateTime  @default(now())
+  readAt         DateTime?
+
+  @@index([contractId])
+  @@index([target])
+  @@index([read])
+  @@index([actionRequired])
+  @@index([createdAt])
+}
+
+/// Üretim akışının tek kaynağı — sözleşme onaylanınca her QuoteItem için bir
+/// ContractItem açılır ve ölçü/kesim/montaj durumu kalem başına burada tutulur:
+/// her kalem kendi ölçü/kesim tarihiyle, diğerlerinden bağımsız ilerler (aynı
+/// sözleşmede bir kalem bugün kesime giderken diğeri 3 ay sonra ölçüye gidebilir).
+model ContractItem {
+  id                Int             @id @default(autoincrement())
+  contractId        Int
+  contract          Contract        @relation(fields: [contractId], references: [id])
+  quoteItemId       Int             @unique
+  quoteItem         QuoteItem       @relation(fields: [quoteItemId], references: [id])
+  costProductId     Int?
+  costProduct       CostProduct?    @relation(fields: [costProductId], references: [id])
+  customerId        Int
+  customer          Customer        @relation(fields: [customerId], references: [id])
+  costCalculationId Int
+  costCalculation   CostCalculation @relation(fields: [costCalculationId], references: [id])
+
+  yapilacakIs String
+  tasCinsi    String?
+
+  // taslak -> olcuye_gonderildi -> olcu_onaylandi -> ready -> in_production ->
+  // atolye_tamamlandi -> completed  (ölçü farkı bulunursa -> blocked; sözleşme
+  // iptalinde herhangi bir aşamadan -> cancelled)
+  status ContractItemStatus @default(taslak)
+
+  measurementApproved Boolean @default(false)
+  revisionClosed      Boolean @default(false)
+  stockReserved       Boolean @default(false)
+  barcodeReady        Boolean @default(false)
+  cuttingListReady    Boolean @default(false)
+
+  plannedMeasurementDate DateTime?
+  actualMeasurementDate  DateTime?
+  plannedCuttingDate     DateTime?
+  actualCuttingDate      DateTime?
+
+  sentToOlcuAt     DateTime?
+  sentToOlcuById   Int?
+  sentToAtolyeAt   DateTime?
+  sentToAtolyeById Int?
+  sentToMontajAt   DateTime?
+  sentToMontajById Int?
+
+  // Montaj ekibi aşamalı teslim akışı
+  stonesDeliveredOk       Boolean   @default(false)
+  stonesDeliveredAt       DateTime?
+  installationCompleted   Boolean   @default(false)
+  installationCompletedAt DateTime?
+
+  // Atölye sıra/planlama — öteleme notu ile birlikte
+  scheduledDate DateTime?
+  scheduleNote  String?
+
+  // Kesim çizimi (AutoCAD/SketchUp) — montaja göndermeden önce zorunlu
+  drawingFileUrl    String?
+  drawingFileName   String?
+  drawingUploadedAt DateTime?
+
+  note String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  measurementTasks MeasurementTask[]
+  revisionRequests RevisionRequest[]
+  stockSlabs       StoneStockSlab[]
+  movements        StoneStockMovement[]
+  payments         Payment[]
+
+  @@index([contractId])
+  @@index([customerId])
+  @@index([costCalculationId])
+  @@index([costProductId])
+  @@index([status])
+}
+
+/// Cari hesap — müşteri, tedarikçi, montajcı, taşeron, personel hepsi burada.
+/// Excel'de bunlar 654 ayrı sayfaydı (CARİLER, CARİLER ALIŞ, DEPO, ŞÜPHELİ
+/// ALACAKLAR, MONTAJCILAR, TAŞERON); altısı da aynı şablondu.
+///
+/// BAKİYE BU TABLODA TUTULMAZ — her zaman CariHareket'ten hesaplanır.
+/// (Excel'de de bakiye formüldü: liste sayfası `='1'!L32` ile sayfadan çekiyordu.)
+model Cari {
+  id        Int       @id @default(autoincrement())
+  kod       String    @unique
+  unvan     String
+  turler    CariTur[]
+  durum     CariDurum @default(aktif)
+  /// Şüpheli/pasif ise sebebi (Excel'deki "İŞİNİ KAYBETTİ PARASI YOK" notu).
+  durumNotu String?
+
+  telefon       String?
+  adres         String?
+  vergiNumarasi String?
+  notlar        String?
+
+  /// CRM müşterisiyle eşleşme — mevcut Customer kayıtları cariye bağlanır.
+  customerId Int?      @unique
+  customer   Customer? @relation(fields: [customerId], references: [id])
+
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  hareketler           CariHareket[]
+  tahsilatBeklentileri BeklenenTahsilat[]
+  finansYukumlulukleri FinansYukumluluk[]
+  giderler             Gider[]
+
+  @@index([unvan])
+  @@index([durum])
+  @@index([deletedAt])
+}
+
+/// Cari hesap hareketi — tek satırlık borç ya da alacak kaydı.
+model CariHareket {
+  id     Int  @id @default(autoincrement())
+  cariId Int
+  cari   Cari @relation(fields: [cariId], references: [id])
+
+  tarih     DateTime      @default(now())
+  yon       CariYon
+  belgeTuru CariBelgeTuru
+  tutar     Float
+  aciklama  String?
+
+  /// Döviz kayıtları için — Excel'de USD/EUR bakiyeler ayrı tutuluyordu.
+  paraBirimi String @default("TRY")
+  kur        Float  @default(1)
+
+  /// Kaynak bağlantıları — hareketi doğuran CRM kaydı.
+  contractId Int?
+  contract   Contract? @relation(fields: [contractId], references: [id])
+  paymentId  Int?
+  payment    Payment?  @relation(fields: [paymentId], references: [id])
+
+  createdById Int?
+  createdBy   User? @relation("CariHareketOlusturan", fields: [createdById], references: [id])
+
+  createdAt DateTime @default(now())
+
+  hesapHareketleri HesapHareketi[]
+
+  @@index([cariId, tarih])
+  @@index([belgeTuru])
+  @@index([contractId])
+  @@index([paymentId])
+}
+
+/// Kasa, banka, esnek hesap ve kredi kartları.
+/// Kaynak: KASA 2026.xlsx'in her günkü sayfasındaki banka/döviz bakiye blokları.
+///
+/// BAKİYE SAKLANMAZ: acilisBakiye + giriş − çıkış olarak hesaplanır (bkz. Cari).
+model Hesap {
+  id           Int         @id @default(autoincrement())
+  ad           String      @unique
+  turu         HesapTuru
+  paraBirimi   ParaBirimi  @default(TRY)
+  sahibi       HesapSahibi @default(sirket)
+  /// Yalnızca esnek hesaplarda dolu. "MEVCUT NAKİT" = toplam − esnek kullanım,
+  /// "NET BAKİYE" = toplam − toplam limit (KASA dosyasındaki iki formül).
+  esnekLimit   Float?
+  /// Sisteme geçiş anındaki bakiye; sonraki her şey harekettir.
+  acilisBakiye Float       @default(0)
+  iban         String?
+  aktif        Boolean     @default(true)
+  sira         Int         @default(0)
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  hareketler      HesapHareketi[]
+  karsiHareketler HesapHareketi[] @relation("KarsiHesap")
+
+  @@index([turu])
+  @@index([aktif])
+}
+
+/// Kasa/banka hareketi. Nakit dönen her işlem burada bir satır üretir.
+/// MAHSUP işlemleri burada YER ALMAZ — sadece cari hareketi oluşur.
+model HesapHareketi {
+  id      Int   @id @default(autoincrement())
+  hesapId Int
+  hesap   Hesap @relation(fields: [hesapId], references: [id])
+
+  tarih    DateTime @default(now())
+  yon      HesapYon
+  tutar    Float
+  aciklama String?
+
+  /// Hesaplar arası virman — karşı hesap doluysa bu hareket bir transferin ayağıdır.
+  karsiHesapId Int?
+  karsiHesap   Hesap? @relation("KarsiHesap", fields: [karsiHesapId], references: [id])
+
+  /// Bir cari hareketiyle eşleşiyorsa (ödeme al / ödeme ver) bağlantısı.
+  cariHareketId Int?
+  cariHareket   CariHareket? @relation(fields: [cariHareketId], references: [id])
+
+  createdById Int?
+  createdBy   User? @relation("HesapHareketiOlusturan", fields: [createdById], references: [id])
+
+  createdAt DateTime @default(now())
+
+  finansYukumlulugu     FinansYukumluluk?
+  gider                 Gider?
+  tahsilatGerceklesmesi BeklenenTahsilatHareketi?
+
+  @@index([hesapId, tarih])
+  @@index([cariHareketId])
+  @@index([karsiHesapId])
+}
+
+/// Çek/senet, kredi taksidi, kart ekstresi ve SGK vadelerinin tek takvimi.
+/// Vade kaydı kasa bakiyesi değildir; ancak ödendiğinde bağlı HesapHareketi oluşur.
+model FinansYukumluluk {
+  id              Int                    @id @default(autoincrement())
+  tur             FinansYukumlulukTuru
+  baslik          String
+  kurum           String?
+  referansNo      String?
+  duzenlemeTarihi DateTime?
+  vadeTarihi      DateTime
+  tutar           Float
+  paraBirimi      ParaBirimi             @default(TRY)
+  durum           FinansYukumlulukDurumu @default(bekliyor)
+  not             String?
+  kaynak          String?
+  kaynakAnahtar   String?                @unique
+  odemeTarihi     DateTime?
+
+  evrakYonu     KiymetliEvrakYonu?
+  evrakDurumu   KiymetliEvrakDurumu?
+  ciroEdilen    String?
+  ciroTarihi    DateTime?
+  portfoyKonumu String?
+
+  hesapHareketiId Int?           @unique
+  hesapHareketi   HesapHareketi? @relation(fields: [hesapHareketiId], references: [id])
+  cariId          Int?
+  cari            Cari?          @relation(fields: [cariId], references: [id])
+  sorumluUserId   Int?
+  sorumluUser     User?          @relation(fields: [sorumluUserId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([durum, vadeTarihi])
+  @@index([tur, vadeTarihi])
+  @@index([cariId])
+  @@index([sorumluUserId])
+}
+
+/// Harcama ve planlı gider defteri. Eski kart harcamaları rapor amaçlıdır;
+/// geçiş tarihinden sonraki ödemeler HesapHareketi ile kasaya bağlanır.
+model Gider {
+  id              Int            @id @default(autoincrement())
+  tarih           DateTime
+  vadeTarihi      DateTime?
+  kategori        String
+  aciklama        String
+  tedarikci       String?
+  tutar           Float
+  paraBirimi      ParaBirimi     @default(TRY)
+  durum           GiderDurumu    @default(odendi)
+  kartSonDort     String?
+  sorumlu         String?
+  kaynak          String?
+  kaynakAnahtar   String?        @unique
+  hesapHareketiId Int?           @unique
+  hesapHareketi   HesapHareketi? @relation(fields: [hesapHareketiId], references: [id])
+  cariId          Int?
+  cari            Cari?          @relation(fields: [cariId], references: [id])
+  sorumluUserId   Int?
+  sorumluUser     User?          @relation(fields: [sorumluUserId], references: [id])
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([durum, vadeTarihi])
+  @@index([tarih, kategori])
+  @@index([cariId])
+  @@index([sorumluUserId])
+}
+
+/// Excel'deki aylık tahsilat programı. Gerçek tahsilat olduğunda kasa
+/// hareketine bağlanır; planlanan ile gerçekleşen ayrı tutulur.
+model BeklenenTahsilat {
+  id             Int                        @id @default(autoincrement())
+  baslik         String
+  cariId         Int?
+  cari           Cari?                      @relation(fields: [cariId], references: [id])
+  vadeTarihi     DateTime?
+  beklenenTutar  Float
+  tahsilEdilen   Float                      @default(0)
+  odemeSekli     String?
+  sorumlu        String?
+  sorumluUserId  Int?
+  sorumluUser    User?                      @relation(fields: [sorumluUserId], references: [id])
+  not            String?
+  durum          TahsilatBeklentiDurumu     @default(bekliyor)
+  kaynak         String?
+  kaynakAnahtar  String?                    @unique
+  gerceklesmeler BeklenenTahsilatHareketi[]
+  createdAt      DateTime                   @default(now())
+  updatedAt      DateTime                   @updatedAt
+
+  @@index([durum, vadeTarihi])
+  @@index([cariId])
+  @@index([sorumluUserId])
+}
+
+model BeklenenTahsilatHareketi {
+  id              Int              @id @default(autoincrement())
+  beklentiId      Int
+  beklenti        BeklenenTahsilat @relation(fields: [beklentiId], references: [id], onDelete: Cascade)
+  tarih           DateTime
+  tutar           Float
+  hesapHareketiId Int              @unique
+  hesapHareketi   HesapHareketi    @relation(fields: [hesapHareketiId], references: [id])
+  createdAt       DateTime         @default(now())
+
+  @@index([beklentiId, tarih])
+}
+
+/// Kart tanımı ve güncel limit durumu. Ekstre borçları FinansYukumluluk'ta tutulur.
+model FinansKrediKarti {
+  id             Int      @id @default(autoincrement())
+  sonDort        String
+  banka          String
+  sahip          String
+  limit          Float
+  hesapKesimGunu Int
+  sonOdemeGunu   Int
+  odenecek       Float    @default(0)
+  kullanilabilir Float    @default(0)
+  sorumlu        String?
+  aktif          Boolean  @default(true)
+  kaynakAnahtar  String?  @unique
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@unique([banka, sonDort])
+  @@index([aktif])
+}
+
+model Payment {
+  id                 Int          @id @default(autoincrement())
+  customerId         Int
+  customer           Customer     @relation(fields: [customerId], references: [id])
+  contractId         Int?
+  contract           Contract?    @relation(fields: [contractId], references: [id])
+  /// Aynı sözleşmedeki iş/teslim kalemlerinin vadeleri birbirinden bağımsız olabilir.
+  contractItemId     Int?
+  contractItem       ContractItem? @relation(fields: [contractItemId], references: [id])
+  tutar              Float
+  odenenTutar        Float        @default(0)
+  yontem             String // nakit, havale_eft, kredi_karti, cek_senet, diger
+  yontemAciklama     String? // "Diğer" yöntemi seçildiğinde serbest metin
+  durum              PaymentDurum @default(bekleniyor)
+  originalVadeTarihi DateTime?
+  vadeTarihi         DateTime?
+  odemeTarihi        DateTime?
+  ertelemeSayisi     Int          @default(0)
+  ertelemeNotu       String?
+  aciklama           String?
+  referenceNumber    String?
+  invoiceNumber      String?
+  /// Otomatik sözleşme planlarının idempotent anahtarı; aynı kalem ikinci kez doğmaz.
+  kaynakAnahtar      String?      @unique
+
+  // Taksit planı alanları
+  planId       Int? // Aynı plandan gelen taksitleri gruplar
+  taksitNo     Int? // Bu kaçıncı taksit (1, 2, 3...)
+  toplamTaksit Int? // Toplam taksit sayısı
+  taksitGunu   Int? // Ayın kaçında ödeneceği (1-31)
+
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  transactions    PaymentTransaction[]
+  cariHareketleri CariHareket[]
+  vadeGecmisi     PaymentVadeDegisikligi[]
+
+  @@index([customerId])
+  @@index([contractId])
+  @@index([contractItemId])
+  @@index([durum])
+  @@index([vadeTarihi])
+  @@index([deletedAt])
+  @@index([createdAt])
+}
+
+/// Vade öteleme denetim izi. Payment üzerindeki vade güncel değerdir; eski
+/// tarihler silinmez ve bu tabloda kimin, ne zaman, neden değiştirdiği saklanır.
+model PaymentVadeDegisikligi {
+  id          Int      @id @default(autoincrement())
+  paymentId   Int
+  payment     Payment  @relation(fields: [paymentId], references: [id], onDelete: Cascade)
+  eskiVade    DateTime?
+  yeniVade    DateTime
+  not         String?
+  createdById Int?
+  createdBy   User?    @relation(fields: [createdById], references: [id])
+  createdAt   DateTime @default(now())
+
+  @@index([paymentId, createdAt])
+}
+
+model PaymentTransaction {
+  id              Int      @id @default(autoincrement())
+  paymentId       Int
+  payment         Payment  @relation(fields: [paymentId], references: [id], onDelete: Cascade)
+  tutar           Float
+  yontem          String
+  odemeTarihi     DateTime @default(now())
+  aciklama        String?
+  referenceNumber String?
+  invoiceNumber   String?
+  createdAt       DateTime @default(now())
+
+  @@index([paymentId])
+  @@index([odemeTarihi])
+}
+
+model QuoteItem {
+  id            Int          @id @default(autoincrement())
+  quoteId       Int
+  quote         Quote        @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+  // Bu iş kalemi hangi taş ihtiyacını (marka/renk/m²) kullanıyor — kalem bazlı stok
+  // rezervasyonu ve üretim akışı bu bağlantı üzerinden kurulur (bkz. ContractItem).
+  costProductId Int?
+  costProduct   CostProduct? @relation(fields: [costProductId], references: [id])
+  yapilacakIs   String
+  tasCinsi      String?
+  kalinlik      Float?
+  en            Float
+  boy           Float
+  birim         String
+  deger         Float
+  miktar        Float
+  ikinciBirim   String       @default("ADET")
+  fiyatTr       Float        @default(0)
+  tutarTr       Float        @default(0)
+  sortOrder     Int          @default(0)
+
+  contractItem ContractItem?
+
+  @@index([costProductId])
+}
+
+model QuoteExtra {
+  id           Int     @id @default(autoincrement())
+  quoteId      Int
+  quote        Quote   @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+  is           String
+  deger        Float
+  miktar       Float
+  birim        String
+  fiyat        Float
+  tutar        Float   @default(0)
+  maliyetDahil Boolean @default(true)
+  sortOrder    Int     @default(0)
+}
+
+model ProductionDevice {
+  id              Int       @id @default(autoincrement())
+  name            String
+  ipAddress       String?
+  macAddress      String?   @unique
+  isOnline        Boolean   @default(false)
+  status          String    @default("offline") // offline, idle, running, maintenance
+  currentOperator String?
+  currentJob      String?
+  lastHeartbeat   DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model PriceAdjustment {
+  id         Int      @id @default(autoincrement())
+  brand      String   @unique
+  rateChange Float    @default(1.0)
+  updatedAt  DateTime @updatedAt
+}
+
+// Stok ekranındaki Ürün Grubu / Marka / Renk seçim listeleri buradan gelir —
+// fiyat içermez (bkz. StonePrice), sadece "bu marka/renk var" tanımını tutar.
+// Kullanıcılar Stok > Tanımlamalar ekranından buraya yeni kayıt ekleyebilir.
+model StoneCatalogItem {
+  id        Int      @id @default(autoincrement())
+  kategori  String
+  marka     String
+  renk      String
+  boyut     Float    @default(0) // m2/plaka — bilinmiyorsa 0
+  createdAt DateTime @default(now())
+
+  @@unique([kategori, marka, renk])
+  @@index([kategori])
+}
+
+/// Ürün Ekle ekranındaki Ürün Grubu / Marka / Model / Renk / Yüzey Tipi / Şekil
+/// seçim listeleri buradan gelir. Daha önce bu listeler bileşen içinde sabit
+/// dizilerdi; eski uygulamadaki gibi kullanıcı yönetimine açıldı.
+model StoneDefinition {
+  id        Int                @id @default(autoincrement())
+  tur       StoneDefinitionTur
+  baslik    String
+  /// Yalnızca `marka` tanımlarında kullanılır: kg hesabında çarpan olarak geçer.
+  /// Eski uygulamada da yoğunluk Marka tablosunda tutuluyor ve marka seçilince
+  /// forma çekiliyordu (urun/new.html.twig).
+  yogunluk  Float?
+  sira      Int                @default(0)
+  aktif     Boolean            @default(true)
+  createdAt DateTime           @default(now())
+
+  @@unique([tur, baslik])
+  @@index([tur, aktif])
+}
+
+model StonePrice {
+  id              Int      @id @default(autoincrement())
+  kategori        String
+  marka           String
+  renk            String
+  yuzey           String   @default("") // Mat, Parlak, Silk, Suede vb.
+  kalinlikMm      Int
+  fiyat           Float // m2 birim fiyat (paraBirimi cinsinden)
+  kampanyaliFiyat Float? // kampanya/iskonto varsa m2 birim fiyat
+  paraBirimi      String   @default("TRY") // EUR, USD, TRY
+  boyut           Float    @default(0) // m2/plaka
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([marka, renk, yuzey, kalinlikMm])
+  @@index([marka, renk])
+  @@index([kategori])
+}
