@@ -1,59 +1,89 @@
-<div align="center">
-  <h1>🏗️ YapıGranit ERP</h1>
-  <p><strong>Enterprise Resource Planning for Natural Stone Manufacturing</strong></p>
-  <p>Full-stack ERP system managing the complete lifecycle from customer acquisition to production, cutting optimization, and financial operations.</p>
+# 🏗️ YapıGranit ERP — Industrial Manufacturing & Operations Management System
 
-  ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-  ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
-  ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
-  ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)
-</div>
+> **Full-stack Enterprise Resource Planning (ERP & CRM) system engineered for natural stone (granite, marble, porcelain) manufacturing, fabrication, and field installation operations.**
+
+YapıGranit ERP is an enterprise-grade management platform that covers the complete end-to-end industrial lifecycle: from lead capture and 360° customer relationship management to automated cost estimation, 2D guillotine cutting optimization, factory CNC terminal synchronization, field measurement/installation tracking, and multi-account financial accounting.
+
+**Developed by Ali Efekan Gökcen** | [LinkedIn](https://www.linkedin.com/in/efekangokcen/) | [GitHub](https://github.com/efekangokcen)
 
 ---
 
-## 📋 Key Features
+## ✨ Key Modules & Capabilities
 
-- 🎯 **Customer 360° Portal & Sales Pipeline (Kanban):** Track leads, manage stages, and gain a holistic view of customer interactions.
-- 🧮 **Cost Calculation Engine:** Accurately compute costs including raw materials, labor, transport, and processing.
-- 📄 **Quote & Contract Management:** Generate professional PDFs for quotes and contracts seamlessly.
-- 📐 **Field Measurement Team Scheduling & Revision Management:** Assign tasks, track progress, and handle requested revisions efficiently.
-- 📦 **Barcode-enabled Stone Slab Inventory & Warehouse Transfers:** Manage physical inventory, track specific slabs, and execute warehouse transfers.
-- 🔪 **2D Guillotine Cutting Optimization:** Advanced nesting algorithm to minimize waste and maximize stone slab yield.
-- 🏭 **Factory Terminal Integration:** CNC/bridge cutter heartbeat monitoring and production queue management.
-- 🚚 **Assembly & Field Delivery Tracking:** Monitor the final stages of the process right to the customer's site.
-- 💰 **Multi-account Financial Hub:** Comprehensive financial tracking supporting 40+ bank/cash accounts, checks, promissory notes, credit installments, and SGK.
-- 📒 **Daily Cash Book & Inter-account Transfers:** Manage virman (transfer) and mahsup (offset) operations.
-- 🔍 **Activity Logging & Audit Trail:** Keep a detailed record of system actions and data changes.
-- 🔐 **Role-Based Access Control:** Secure access levels tailored for Admin, Sales, Workshop, and Measurement teams.
+- **🎯 Customer 360° & Sales Pipeline**: Multi-stage visual sales funnel (Kanban), lead qualification, and customer interaction history.
+- **📐 Precision Cost Engine**: Dynamic calculation engine processing raw stone dimensions, wastage coefficients, custom edge tooling, fason processing, labor, and transport costs.
+- **📄 Proposals & Contracts**: Multi-currency quote generation, contract binding, automated payment schedule generation, and vector-clean PDF rendering.
+- **📏 Field Measurement Coordination**: Mobile-responsive measurement scheduling, on-site dimension adjustments, and revision request workflows.
+- **📦 Barcode Slab & Inventory Control**: Slab-level barcode tracking, warehouse bin transfers, stone reservations, and automated procurement alerts.
+- **⚙️ 2D Guillotine Cutting Optimization**: Custom 2D nesting algorithm maximizing raw slab yield and minimizing industrial scrap material.
+- **🏭 Factory Floor Terminal Integration**: Real-time heartbeat monitoring and job queuing for workshop CNC machines and bridge cutting saws.
+- **🚚 Field Installation & Delivery Tracking**: Multi-step delivery verification, on-site sign-off, and customer acceptance workflows.
+- **💼 Comprehensive Financial Hub**:
+  - Management of **40+ bank, cash, credit line (KMH), and corporate credit card accounts**.
+  - Commercial promissory notes (*senet*), checks, and SGK liability lifecycle tracking.
+  - Daily cash ledger (*kasa defteri*), inter-account transfers (*virman*), and cross-ledger settlements (*mahsup*).
+  - Current account (*cari*) reconciliation with automatic transaction logging.
+- **🛡️ Audit Trail & RBAC**: Granular role-based authorization (Admin, Sales, Workshop, Field Measurement) and immutable system activity logging.
+
+---
 
 ## 🛠️ Tech Stack
 
-| Category | Technology |
-|---|---|
-| **Framework** | Next.js 14 (App Router) |
-| **Language** | TypeScript |
-| **Database** | PostgreSQL |
-| **ORM** | Prisma |
-| **Styling** | Tailwind CSS, shadcn/ui |
-| **State & Fetching** | React Query, Zustand |
-| **PDF Generation** | @react-pdf/renderer |
-| **Authentication** | NextAuth.js / Supabase Auth |
+| Layer | Technology |
+| :--- | :--- |
+| **Framework** | Next.js 16 (App Router, Server Actions, React 19, Turbopack) |
+| **Language** | TypeScript 5 |
+| **UI & Styling** | Tailwind CSS v4, Radix UI Primitives, Lucide Icons, Sonner |
+| **Database & ORM** | PostgreSQL, Prisma ORM 7 (`@prisma/adapter-pg`) |
+| **Authentication** | NextAuth.js (Auth.js v5) with JWT & Role-Based Middleware |
+| **Document Generation** | jsPDF & jsPDF-autotable (Contract & Quote PDF Engines) |
+| **Validation & Quality** | Zod 4, Playwright E2E Testing, ESLint 9 |
 
-## 📐 Architecture
+---
 
-The system utilizes a monolithic architecture built on top of Next.js, leveraging Server Components and Server Actions for efficient data fetching and mutations. The backend interacts directly with a robust PostgreSQL database through Prisma ORM, ensuring type safety from end to end. The front-end employs a modular component structure (shadcn/ui) optimized for complex data entry and visualization.
+## 🗄️ Database & Cloud Architecture
 
-## 🗄️ Database Structure
+The production database is hosted on **Supabase Cloud (PostgreSQL on AWS)**. 
 
-The robust relational database model is designed specifically for manufacturing workflows. It features:
-- **37 Prisma Models** representing core entities (Customers, Contracts, Stones, Transactions, etc.)
-- **13 PostgreSQL Enums** for strict state management (e.g., pipeline stages, material finishes, payment types)
+To maintain security, commercial confidentiality, and data privacy:
+- Production database credentials and live corporate data have been securely isolated.
+- The complete relational database architecture is defined and version-controlled via **Prisma Schema (`prisma/schema.prisma`)** comprising **37 relational models** and **13 PostgreSQL enums**.
+- **15 incremental SQL migration files** are included in `prisma/migrations/` to replicate the exact database schema in any environment.
+
+### Entity Relationship Overview:
+```
+Customer ──< CostCalculation ──< Quote ──1:1── Contract ──< ContractItem
+                                                                 │
+                   ┌─────────────────────────────────────────────┼─────────────────────────────┐
+                   ▼                                             ▼                             ▼
+            MeasurementTask                               WorkQueue (Workshop)           InstallationTask
+                   │                                             │                             │
+                   ▼                                             ▼                             ▼
+              RevisionReq                                2D Cutting Nesting             Site Delivery Sign-off
+```
+
+---
+
+## 🔐 Security & Architecture Highlights
+
+- **Multi-Role RBAC:** Strict route and action isolation across Administrator, Sales, Workshop, and Field teams.
+- **Content Security Policy (CSP):** Hardened HTTP headers preventing XSS, clickjacking, and MIME sniffing.
+- **Brute-Force Rate Limiting:** Endpoint protection for authentication and sensitive transaction routes.
+- **Safe Server Actions:** Custom crash-resilient wrapper (`safe-action.ts`) ensuring transaction atomicity.
+
+---
 
 ## 🚀 Getting Started
 
+### Prerequisites
+- Node.js 18+ & pnpm
+- A PostgreSQL instance or Supabase project
+
+### Setup
+
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/yapigranit-crm.git
+   git clone https://github.com/efekangokcen/yapigranit-crm.git
    cd yapigranit-crm
    ```
 
@@ -62,50 +92,34 @@ The robust relational database model is designed specifically for manufacturing 
    pnpm install
    ```
 
-3. **Environment Setup**
+3. **Configure Environment Variables**
    ```bash
    cp .env.example .env.local
-   # Update the values in .env.local with your database and auth credentials
    ```
+   Provide your PostgreSQL / Supabase connection URL in `.env.local`.
 
-4. **Database Migration**
+4. **Initialize Database**
    ```bash
-   npx prisma migrate dev
+   npx prisma migrate deploy
+   # or
+   npx prisma db push
    ```
 
-5. **Seed Demo Data**
-   ```bash
-   npx tsx scripts/seed-all-demo.ts
-   ```
-
-6. **Run the Development Server**
+5. **Start Development Server**
    ```bash
    pnpm dev
    ```
 
-## 📊 Modules Overview
-
-| Module | Description |
-|---|---|
-| **Sales** | Pipeline, Quotes, Contracts, Customer profiles |
-| **Production** | Cutting optimization, Factory terminal, Quality control |
-| **Inventory** | Barcode tracking, Slabs, Warehouses, Suppliers |
-| **Finance** | Cashbook, Checks, Installments, Financial reporting |
-| **Logistics** | Measurement scheduling, Deliveries, Installations |
-
-## 🔐 Security
-
-- **Role-Based Access Control (RBAC):** Strict isolation between Sales, Workshop, Measurement, and Admin roles.
-- **CSP Headers:** Implemented Content Security Policy to mitigate XSS attacks.
-- **Brute-Force Protection:** Rate limiting on sensitive endpoints like authentication.
-- **Data Sanitization:** Input validation using Zod schemas.
+---
 
 ## 👨‍💻 Developer
 
-**Developed by Ali Efekan Gökcen**
-- [LinkedIn](https://www.linkedin.com/in/aliefekangokcen)
-- [GitHub](https://github.com/aliefekangokcen)
+**Ali Efekan Gökcen**  
+- [LinkedIn Profile](https://www.linkedin.com/in/efekangokcen/)
+- [GitHub Profile](https://github.com/efekangokcen)
 
-## License
+---
+
+## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
