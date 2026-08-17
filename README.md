@@ -73,6 +73,43 @@ Customer ──< CostCalculation ──< Quote ──1:1── Contract ──< 
 
 ---
 
+## 🗄️ Step-by-Step Database Setup & Provisioning Guide
+
+To run this ERP locally with your own database (Supabase or any PostgreSQL instance):
+
+### 1. Create a PostgreSQL Database
+- Sign up at [Supabase](https://supabase.com) (or spin up a local PostgreSQL Docker container).
+- Create a new project and copy your **Transaction Connection String** (URI) and **Direct Connection String** from **Settings → Database**.
+
+### 2. Configure Environment Variables
+Copy `.env.example` to `.env.local` and add your database credentials:
+```bash
+cp .env.example .env.local
+```
+```env
+# Example .env.local
+DATABASE_URL="postgresql://postgres:[YOUR-PASSWORD]@db.[YOUR-PROJECT-REF].supabase.co:5432/postgres?pgbouncer=true"
+DIRECT_URL="postgresql://postgres:[YOUR-PASSWORD]@db.[YOUR-PROJECT-REF].supabase.co:5432/postgres"
+NEXT_PUBLIC_SUPABASE_URL="https://[YOUR-PROJECT-REF].supabase.co"
+SUPABASE_SERVICE_ROLE_KEY="your-service-role-key"
+AUTH_SECRET="generate-with-openssl-rand-base64-32"
+DEVICE_API_KEY="your-custom-terminal-api-key"
+```
+
+### 3. Deploy Database Schema
+Run Prisma to automatically create all **37 relational tables, 13 enums, indexes, and foreign keys** in your database:
+```bash
+npx prisma db push
+```
+*(Alternatively, apply formal migrations with `npx prisma migrate deploy`)*
+
+### 4. Create Initial Admin User (Optional)
+```bash
+npx tsx scripts/create-admin-user.ts
+```
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
