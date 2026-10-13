@@ -160,3 +160,15 @@ npx tsx scripts/create-admin-user.ts
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## ⚠️ Bu depo hakkında / About this repository
+
+Bu depo projenin **tam ve çalışır sürümü değildir**; eksik, güncel olmayan ve çalışmayan parçalar içeren bir vitrin kopyasıdır. Olduğu gibi çalıştırmayı denemeyin. Projenin tam sürümü, canlı demo veya iş birliği için benimle iletişime geçin:
+
+*This repository is **not the complete, working version** of the project; it is a showcase snapshot with missing, outdated and non-functional parts. Do not expect it to run as is. For the full version, a live demo or collaboration, get in touch:*
+
+- E-posta / Email: [efekangokcen@gmail.com](mailto:efekangokcen@gmail.com)
+- LinkedIn: [linkedin.com/in/efekangokcen](https://www.linkedin.com/in/efekangokcen/)
+- Web: [sportssimulation.net](https://sportssimulation.net)
